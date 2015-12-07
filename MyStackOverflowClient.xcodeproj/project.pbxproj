@@ -54,8 +54,8 @@
 		BFEE230D1C16449500C8FF94 /* MyStackOverflowClientUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyStackOverflowClientUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFEE23111C16449500C8FF94 /* MyStackOverflowClientUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyStackOverflowClientUITests.m; sourceTree = "<group>"; };
 		BFEE23131C16449500C8FF94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BFEE232C1C164C2D00C8FF94 /* OAuthWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthWebViewController.h; sourceTree = "<group>"; };
-		BFEE232D1C164C2D00C8FF94 /* OAuthWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuthWebViewController.m; sourceTree = "<group>"; };
+		BFEE232C1C164C2D00C8FF94 /* OAuthWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OAuthWebViewController.h; path = ../OAuthWebViewController.h; sourceTree = "<group>"; };
+		BFEE232D1C164C2D00C8FF94 /* OAuthWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OAuthWebViewController.m; path = ../OAuthWebViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,8 +86,6 @@
 		BFEE22DD1C16449500C8FF94 = {
 			isa = PBXGroup;
 			children = (
-				BFEE232C1C164C2D00C8FF94 /* OAuthWebViewController.h */,
-				BFEE232D1C164C2D00C8FF94 /* OAuthWebViewController.m */,
 				BFEE22E81C16449500C8FF94 /* MyStackOverflowClient */,
 				BFEE23051C16449500C8FF94 /* MyStackOverflowClientTests */,
 				BFEE23101C16449500C8FF94 /* MyStackOverflowClientUITests */,
@@ -112,6 +110,8 @@
 				BFEE22ED1C16449500C8FF94 /* AppDelegate.m */,
 				BFEE22EF1C16449500C8FF94 /* ViewController.h */,
 				BFEE22F01C16449500C8FF94 /* ViewController.m */,
+				BFEE232C1C164C2D00C8FF94 /* OAuthWebViewController.h */,
+				BFEE232D1C164C2D00C8FF94 /* OAuthWebViewController.m */,
 				BFEE22F21C16449500C8FF94 /* Main.storyboard */,
 				BFEE22F81C16449500C8FF94 /* Assets.xcassets */,
 				BFEE22FA1C16449500C8FF94 /* LaunchScreen.storyboard */,

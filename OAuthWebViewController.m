@@ -32,22 +32,28 @@ NSString const *kRedirectURI = @"https://stackexchange.com/oauth/login_success";
     
     NSString *stackExchangeURLString = [NSString stringWithFormat:@"%@client_id=%@&redirect_uri=%@", kBaseURL, kClientID, kRedirectURI];
     
-    NSURL
+    NSURL *stackExchangeURL = [NSURL URLWithString:stackExchangeURLString];
+    [self.webView loadRequest:[NSURLRequest requestWithURL:stackExchangeURL]];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
+    
+    NSURLRequest *request = navigationAction.request;
+    NSURL *requestURL = request.URL;
+    
+    if ([requestURL.description containsString:@"access_token"]) {
+        NSArray *urlComponents = [[requestURL description]componentsSeparatedByString:@"="];
+        NSString *accessToken = urlComponents.lastObject;
+        NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+        [userDefaults setObject:accessToken forKey:@"accessToken"];
+        [userDefaults synchronize];
+        
+        if (self.completion) {
+            self.completion();
+        }
+    }
+    
+    decisionHandler(WKNavigationActionPolicyAllow);
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
