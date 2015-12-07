@@ -16,6 +16,7 @@
 		BFEE22FC1C16449500C8FF94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFEE22FA1C16449500C8FF94 /* LaunchScreen.storyboard */; };
 		BFEE23071C16449500C8FF94 /* MyStackOverflowClientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEE23061C16449500C8FF94 /* MyStackOverflowClientTests.m */; };
 		BFEE23121C16449500C8FF94 /* MyStackOverflowClientUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEE23111C16449500C8FF94 /* MyStackOverflowClientUITests.m */; };
+		BFEE232E1C164C2D00C8FF94 /* OAuthWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEE232D1C164C2D00C8FF94 /* OAuthWebViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		BFEE230D1C16449500C8FF94 /* MyStackOverflowClientUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyStackOverflowClientUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFEE23111C16449500C8FF94 /* MyStackOverflowClientUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyStackOverflowClientUITests.m; sourceTree = "<group>"; };
 		BFEE23131C16449500C8FF94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFEE232C1C164C2D00C8FF94 /* OAuthWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthWebViewController.h; sourceTree = "<group>"; };
+		BFEE232D1C164C2D00C8FF94 /* OAuthWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuthWebViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +86,8 @@
 		BFEE22DD1C16449500C8FF94 = {
 			isa = PBXGroup;
 			children = (
+				BFEE232C1C164C2D00C8FF94 /* OAuthWebViewController.h */,
+				BFEE232D1C164C2D00C8FF94 /* OAuthWebViewController.m */,
 				BFEE22E81C16449500C8FF94 /* MyStackOverflowClient */,
 				BFEE23051C16449500C8FF94 /* MyStackOverflowClientTests */,
 				BFEE23101C16449500C8FF94 /* MyStackOverflowClientUITests */,
@@ -276,6 +281,7 @@
 				BFEE22F11C16449500C8FF94 /* ViewController.m in Sources */,
 				BFEE22F71C16449500C8FF94 /* MyStackOverflowClient.xcdatamodeld in Sources */,
 				BFEE22EE1C16449500C8FF94 /* AppDelegate.m in Sources */,
+				BFEE232E1C164C2D00C8FF94 /* OAuthWebViewController.m in Sources */,
 				BFEE22EB1C16449500C8FF94 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -502,6 +508,7 @@
 				BFEE23181C16449500C8FF94 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BFEE23191C16449500C8FF94 /* Build configuration list for PBXNativeTarget "MyStackOverflowClientTests" */ = {
 			isa = XCConfigurationList;
@@ -510,6 +517,7 @@
 				BFEE231B1C16449500C8FF94 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BFEE231C1C16449500C8FF94 /* Build configuration list for PBXNativeTarget "MyStackOverflowClientUITests" */ = {
 			isa = XCConfigurationList;
@@ -518,6 +526,7 @@
 				BFEE231E1C16449500C8FF94 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
