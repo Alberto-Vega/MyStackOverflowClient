@@ -17,10 +17,10 @@
 		BFEE23121C16449500C8FF94 /* MyStackOverflowClientUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEE23111C16449500C8FF94 /* MyStackOverflowClientUITests.m */; };
 		BFEE232E1C164C2D00C8FF94 /* OAuthWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEE232D1C164C2D00C8FF94 /* OAuthWebViewController.m */; };
 		BFEE23321C16586100C8FF94 /* MenuContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEE23311C16586100C8FF94 /* MenuContainerViewController.m */; };
-		BFEE233B1C165BA300C8FF94 /* OAuthWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEE23341C165BA300C8FF94 /* OAuthWebViewController.m */; };
 		BFEE233C1C165BA300C8FF94 /* MyProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEE23361C165BA300C8FF94 /* MyProfileViewController.m */; };
 		BFEE233D1C165BA300C8FF94 /* MyQuestionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEE23381C165BA300C8FF94 /* MyQuestionsViewController.m */; };
 		BFEE233E1C165BA300C8FF94 /* QuestionSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEE233A1C165BA300C8FF94 /* QuestionSearchViewController.m */; };
+		BFEE23411C16697000C8FF94 /* Error.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEE23401C16697000C8FF94 /* Error.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,13 +60,14 @@
 		BFEE232D1C164C2D00C8FF94 /* OAuthWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OAuthWebViewController.m; path = ../OAuthWebViewController.m; sourceTree = "<group>"; };
 		BFEE23301C16586100C8FF94 /* MenuContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuContainerViewController.h; sourceTree = "<group>"; };
 		BFEE23311C16586100C8FF94 /* MenuContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuContainerViewController.m; sourceTree = "<group>"; };
-		BFEE23341C165BA300C8FF94 /* OAuthWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuthWebViewController.m; sourceTree = "<group>"; };
 		BFEE23351C165BA300C8FF94 /* MyProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyProfileViewController.h; sourceTree = "<group>"; };
 		BFEE23361C165BA300C8FF94 /* MyProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyProfileViewController.m; sourceTree = "<group>"; };
 		BFEE23371C165BA300C8FF94 /* MyQuestionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyQuestionsViewController.h; sourceTree = "<group>"; };
 		BFEE23381C165BA300C8FF94 /* MyQuestionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyQuestionsViewController.m; sourceTree = "<group>"; };
 		BFEE23391C165BA300C8FF94 /* QuestionSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionSearchViewController.h; sourceTree = "<group>"; };
 		BFEE233A1C165BA300C8FF94 /* QuestionSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionSearchViewController.m; sourceTree = "<group>"; };
+		BFEE233F1C16697000C8FF94 /* Error.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Error.h; sourceTree = "<group>"; };
+		BFEE23401C16697000C8FF94 /* Error.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Error.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +134,7 @@
 		BFEE22E91C16449500C8FF94 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BFEE23421C166A7600C8FF94 /* Error */,
 				BFEE22EA1C16449500C8FF94 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -159,16 +161,15 @@
 		BFEE232F1C16581000C8FF94 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				BFEE23341C165BA300C8FF94 /* OAuthWebViewController.m */,
+				BFEE23331C16586A00C8FF94 /* ContainerViewController */,
+				BFEE232C1C164C2D00C8FF94 /* OAuthWebViewController.h */,
+				BFEE232D1C164C2D00C8FF94 /* OAuthWebViewController.m */,
+				BFEE23391C165BA300C8FF94 /* QuestionSearchViewController.h */,
+				BFEE233A1C165BA300C8FF94 /* QuestionSearchViewController.m */,
 				BFEE23351C165BA300C8FF94 /* MyProfileViewController.h */,
 				BFEE23361C165BA300C8FF94 /* MyProfileViewController.m */,
 				BFEE23371C165BA300C8FF94 /* MyQuestionsViewController.h */,
 				BFEE23381C165BA300C8FF94 /* MyQuestionsViewController.m */,
-				BFEE23391C165BA300C8FF94 /* QuestionSearchViewController.h */,
-				BFEE233A1C165BA300C8FF94 /* QuestionSearchViewController.m */,
-				BFEE23331C16586A00C8FF94 /* ContainerViewController */,
-				BFEE232C1C164C2D00C8FF94 /* OAuthWebViewController.h */,
-				BFEE232D1C164C2D00C8FF94 /* OAuthWebViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -180,6 +181,15 @@
 				BFEE23311C16586100C8FF94 /* MenuContainerViewController.m */,
 			);
 			name = ContainerViewController;
+			sourceTree = "<group>";
+		};
+		BFEE23421C166A7600C8FF94 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				BFEE233F1C16697000C8FF94 /* Error.h */,
+				BFEE23401C16697000C8FF94 /* Error.m */,
+			);
+			name = Error;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -312,8 +322,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFEE23411C16697000C8FF94 /* Error.m in Sources */,
 				BFEE22F71C16449500C8FF94 /* MyStackOverflowClient.xcdatamodeld in Sources */,
-				BFEE233B1C165BA300C8FF94 /* OAuthWebViewController.m in Sources */,
 				BFEE22EE1C16449500C8FF94 /* AppDelegate.m in Sources */,
 				BFEE233E1C165BA300C8FF94 /* QuestionSearchViewController.m in Sources */,
 				BFEE232E1C164C2D00C8FF94 /* OAuthWebViewController.m in Sources */,

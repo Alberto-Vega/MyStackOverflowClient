@@ -7,8 +7,15 @@
 //
 
 #import "QuestionSearchViewController.h"
+#import "Error.h"
 
 @interface QuestionSearchViewController ()
+@property(strong, nonatomic) NSError *myError;
+@property(strong, nonatomic) NSError *myError2;
+@property(strong, nonatomic) NSError *myError3;
+@property(strong, nonatomic) NSError *myError4;
+@property(strong, nonatomic) NSError *myError5;
+
 
 @end
 
@@ -16,22 +23,25 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-}
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    NSError *stackOverflowError = [NSError errorWithDomain:kStackOverFlowErrorDomain code:StackOverFlowTooManyAttempts userInfo:nil];
+    
+    NSError *anotherError = [NSError errorWithDomain:kStackOverFlowErrorDomain code:StackOverFlowConnectionDown userInfo:nil];
+    
+    self.myError = [NSError errorWithDomain:@"My New Error" code:1 userInfo:nil];
+    self.myError2 = [NSError errorWithDomain:NSURLErrorDomain code:2 userInfo:nil];
+    self.myError3 = [NSError errorWithDomain:NSPOSIXErrorDomain code:3 userInfo:nil];
+    self.myError4 = [NSError errorWithDomain:NSPOSIXErrorDomain code:4 userInfo:nil];
+    self.myError5 = [NSError errorWithDomain:NSPOSIXErrorDomain code:5 userInfo:nil];
+    
+    NSLog(@"%@", self.myError.localizedDescription);
+    NSLog(@"%@", self.myError2.localizedDescription);
+    NSLog(@" ");
+    NSLog(@"%@", self.myError3.localizedDescription);
+    NSLog(@"%@", self.myError4.localizedDescription);
+    NSLog(@"%@", self.myError5.localizedDescription);
+    
+    NSLog(@"%@", NSPOSIXErrorDomain);
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

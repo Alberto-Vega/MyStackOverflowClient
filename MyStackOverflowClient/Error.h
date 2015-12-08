@@ -8,6 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Error : NSString
+extern NSString *const kStackOverFlowErrorDomain;
 
-@end
+typedef enum: NSUInteger {
+    StackOverFlowBadJSON,
+    StackOverFlowConnectionDown,
+    StackOverFlowTooManyAttempts,
+    StackOverFlowInvalidParameter,
+    StackOverFlowNeedAuthentication,
+    StackOverFlowGeneralError
+    } StackOverFlowErrorCodes;
