@@ -46,7 +46,7 @@
         <!--My Questions View Controller-->
         <scene sceneID="Nw5-ki-dvh">
             <objects>
-                <viewController storyboardIdentifier="MyQuestionsViewController" id="7wL-iJ-ADE" customClass="MyQuestionsViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MyQuestionsVC" id="7wL-iJ-ADE" customClass="MyQuestionsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="AfN-Dp-pkV"/>
                         <viewControllerLayoutGuide type="bottom" id="cyb-Yh-RHT"/>

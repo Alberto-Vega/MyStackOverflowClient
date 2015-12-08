@@ -46,8 +46,8 @@ NSTimeInterval const kTimeToSlideMenuOpen = 0.2;
 
 - (void)setupAllViewControllers {
     [self setupMenuViewController];
-//    [self setupMainContentViewController];
-//    [self setupAdditionalMenuViewControllers];
+    [self setupMainContentViewController];
+    [self setupAdditionalMenuViewControllers];
     
     self.viewControllers = @[self.topViewController, self.myQuestionsViewController];
 }
@@ -78,7 +78,7 @@ NSTimeInterval const kTimeToSlideMenuOpen = 0.2;
     self.topViewController = contentViewController;
 }
 
-- (void)setupAdditionalMenuViewController {
+- (void)setupAdditionalMenuViewControllers {
     
     MyQuestionsViewController *myQuestionsVC = [self.storyboard instantiateViewControllerWithIdentifier:@"MyQuestionsVC"];
     self.myQuestionsViewController = myQuestionsVC;

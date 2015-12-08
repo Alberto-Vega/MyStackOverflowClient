@@ -48,10 +48,7 @@
     NSLog(@" ");
     
     NSLog(@"%@", NSPOSIXErrorDomain);
-    
-    
+        
 }
-
-
 
 @end

@@ -10,11 +10,11 @@
 #import "Error.h"
 
 @interface QuestionSearchViewController ()
-@property(strong, nonatomic) NSError *myError;
-@property(strong, nonatomic) NSError *myError2;
-@property(strong, nonatomic) NSError *myError3;
-@property(strong, nonatomic) NSError *myError4;
-@property(strong, nonatomic) NSError *myError5;
+//@property(strong, nonatomic) NSError *myError;
+//@property(strong, nonatomic) NSError *myError2;
+//@property(strong, nonatomic) NSError *myError3;
+//@property(strong, nonatomic) NSError *myError4;
+//@property(strong, nonatomic) NSError *myError5;
 
 
 @end
