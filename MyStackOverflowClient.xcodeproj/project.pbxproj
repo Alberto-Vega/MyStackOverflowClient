@@ -17,6 +17,10 @@
 		BFEE23121C16449500C8FF94 /* MyStackOverflowClientUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEE23111C16449500C8FF94 /* MyStackOverflowClientUITests.m */; };
 		BFEE232E1C164C2D00C8FF94 /* OAuthWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEE232D1C164C2D00C8FF94 /* OAuthWebViewController.m */; };
 		BFEE23321C16586100C8FF94 /* MenuContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEE23311C16586100C8FF94 /* MenuContainerViewController.m */; };
+		BFEE233B1C165BA300C8FF94 /* OAuthWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEE23341C165BA300C8FF94 /* OAuthWebViewController.m */; };
+		BFEE233C1C165BA300C8FF94 /* MyProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEE23361C165BA300C8FF94 /* MyProfileViewController.m */; };
+		BFEE233D1C165BA300C8FF94 /* MyQuestionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEE23381C165BA300C8FF94 /* MyQuestionsViewController.m */; };
+		BFEE233E1C165BA300C8FF94 /* QuestionSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEE233A1C165BA300C8FF94 /* QuestionSearchViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +60,13 @@
 		BFEE232D1C164C2D00C8FF94 /* OAuthWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OAuthWebViewController.m; path = ../OAuthWebViewController.m; sourceTree = "<group>"; };
 		BFEE23301C16586100C8FF94 /* MenuContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuContainerViewController.h; sourceTree = "<group>"; };
 		BFEE23311C16586100C8FF94 /* MenuContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuContainerViewController.m; sourceTree = "<group>"; };
+		BFEE23341C165BA300C8FF94 /* OAuthWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuthWebViewController.m; sourceTree = "<group>"; };
+		BFEE23351C165BA300C8FF94 /* MyProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyProfileViewController.h; sourceTree = "<group>"; };
+		BFEE23361C165BA300C8FF94 /* MyProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyProfileViewController.m; sourceTree = "<group>"; };
+		BFEE23371C165BA300C8FF94 /* MyQuestionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyQuestionsViewController.h; sourceTree = "<group>"; };
+		BFEE23381C165BA300C8FF94 /* MyQuestionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyQuestionsViewController.m; sourceTree = "<group>"; };
+		BFEE23391C165BA300C8FF94 /* QuestionSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionSearchViewController.h; sourceTree = "<group>"; };
+		BFEE233A1C165BA300C8FF94 /* QuestionSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionSearchViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +159,13 @@
 		BFEE232F1C16581000C8FF94 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				BFEE23341C165BA300C8FF94 /* OAuthWebViewController.m */,
+				BFEE23351C165BA300C8FF94 /* MyProfileViewController.h */,
+				BFEE23361C165BA300C8FF94 /* MyProfileViewController.m */,
+				BFEE23371C165BA300C8FF94 /* MyQuestionsViewController.h */,
+				BFEE23381C165BA300C8FF94 /* MyQuestionsViewController.m */,
+				BFEE23391C165BA300C8FF94 /* QuestionSearchViewController.h */,
+				BFEE233A1C165BA300C8FF94 /* QuestionSearchViewController.m */,
 				BFEE23331C16586A00C8FF94 /* ContainerViewController */,
 				BFEE232C1C164C2D00C8FF94 /* OAuthWebViewController.h */,
 				BFEE232D1C164C2D00C8FF94 /* OAuthWebViewController.m */,
@@ -295,9 +313,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFEE22F71C16449500C8FF94 /* MyStackOverflowClient.xcdatamodeld in Sources */,
+				BFEE233B1C165BA300C8FF94 /* OAuthWebViewController.m in Sources */,
 				BFEE22EE1C16449500C8FF94 /* AppDelegate.m in Sources */,
+				BFEE233E1C165BA300C8FF94 /* QuestionSearchViewController.m in Sources */,
 				BFEE232E1C164C2D00C8FF94 /* OAuthWebViewController.m in Sources */,
+				BFEE233C1C165BA300C8FF94 /* MyProfileViewController.m in Sources */,
 				BFEE23321C16586100C8FF94 /* MenuContainerViewController.m in Sources */,
+				BFEE233D1C165BA300C8FF94 /* MyQuestionsViewController.m in Sources */,
 				BFEE22EB1C16449500C8FF94 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
