@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  MenuContainerViewController.h
 //  MyStackOverflowClient
 //
 //  Created by Alberto Vega Gonzalez on 12/7/15.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface MenuContainerViewController : UIViewController
 
 @end
-

@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		BFEE22EB1C16449500C8FF94 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEE22EA1C16449500C8FF94 /* main.m */; };
 		BFEE22EE1C16449500C8FF94 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEE22ED1C16449500C8FF94 /* AppDelegate.m */; };
-		BFEE22F11C16449500C8FF94 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEE22F01C16449500C8FF94 /* ViewController.m */; };
 		BFEE22F41C16449500C8FF94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFEE22F21C16449500C8FF94 /* Main.storyboard */; };
 		BFEE22F71C16449500C8FF94 /* MyStackOverflowClient.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BFEE22F51C16449500C8FF94 /* MyStackOverflowClient.xcdatamodeld */; };
 		BFEE22F91C16449500C8FF94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFEE22F81C16449500C8FF94 /* Assets.xcassets */; };
@@ -17,6 +16,7 @@
 		BFEE23071C16449500C8FF94 /* MyStackOverflowClientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEE23061C16449500C8FF94 /* MyStackOverflowClientTests.m */; };
 		BFEE23121C16449500C8FF94 /* MyStackOverflowClientUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEE23111C16449500C8FF94 /* MyStackOverflowClientUITests.m */; };
 		BFEE232E1C164C2D00C8FF94 /* OAuthWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEE232D1C164C2D00C8FF94 /* OAuthWebViewController.m */; };
+		BFEE23321C16586100C8FF94 /* MenuContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEE23311C16586100C8FF94 /* MenuContainerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,8 +41,6 @@
 		BFEE22EA1C16449500C8FF94 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BFEE22EC1C16449500C8FF94 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BFEE22ED1C16449500C8FF94 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		BFEE22EF1C16449500C8FF94 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		BFEE22F01C16449500C8FF94 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		BFEE22F31C16449500C8FF94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BFEE22F61C16449500C8FF94 /* MyStackOverflowClient.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyStackOverflowClient.xcdatamodel; sourceTree = "<group>"; };
 		BFEE22F81C16449500C8FF94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -56,6 +54,8 @@
 		BFEE23131C16449500C8FF94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFEE232C1C164C2D00C8FF94 /* OAuthWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OAuthWebViewController.h; path = ../OAuthWebViewController.h; sourceTree = "<group>"; };
 		BFEE232D1C164C2D00C8FF94 /* OAuthWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OAuthWebViewController.m; path = ../OAuthWebViewController.m; sourceTree = "<group>"; };
+		BFEE23301C16586100C8FF94 /* MenuContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuContainerViewController.h; sourceTree = "<group>"; };
+		BFEE23311C16586100C8FF94 /* MenuContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuContainerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,10 +108,7 @@
 			children = (
 				BFEE22EC1C16449500C8FF94 /* AppDelegate.h */,
 				BFEE22ED1C16449500C8FF94 /* AppDelegate.m */,
-				BFEE22EF1C16449500C8FF94 /* ViewController.h */,
-				BFEE22F01C16449500C8FF94 /* ViewController.m */,
-				BFEE232C1C164C2D00C8FF94 /* OAuthWebViewController.h */,
-				BFEE232D1C164C2D00C8FF94 /* OAuthWebViewController.m */,
+				BFEE232F1C16581000C8FF94 /* Controllers */,
 				BFEE22F21C16449500C8FF94 /* Main.storyboard */,
 				BFEE22F81C16449500C8FF94 /* Assets.xcassets */,
 				BFEE22FA1C16449500C8FF94 /* LaunchScreen.storyboard */,
@@ -146,6 +143,25 @@
 				BFEE23131C16449500C8FF94 /* Info.plist */,
 			);
 			path = MyStackOverflowClientUITests;
+			sourceTree = "<group>";
+		};
+		BFEE232F1C16581000C8FF94 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BFEE23331C16586A00C8FF94 /* ContainerViewController */,
+				BFEE232C1C164C2D00C8FF94 /* OAuthWebViewController.h */,
+				BFEE232D1C164C2D00C8FF94 /* OAuthWebViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		BFEE23331C16586A00C8FF94 /* ContainerViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BFEE23301C16586100C8FF94 /* MenuContainerViewController.h */,
+				BFEE23311C16586100C8FF94 /* MenuContainerViewController.m */,
+			);
+			name = ContainerViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,10 +294,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BFEE22F11C16449500C8FF94 /* ViewController.m in Sources */,
 				BFEE22F71C16449500C8FF94 /* MyStackOverflowClient.xcdatamodeld in Sources */,
 				BFEE22EE1C16449500C8FF94 /* AppDelegate.m in Sources */,
 				BFEE232E1C164C2D00C8FF94 /* OAuthWebViewController.m in Sources */,
+				BFEE23321C16586100C8FF94 /* MenuContainerViewController.m in Sources */,
 				BFEE22EB1C16449500C8FF94 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
