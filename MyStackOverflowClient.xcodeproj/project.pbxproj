@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		08B9A28E9F657CADEBFD9BF8 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 71EFBE1D82820CAC6DBA7E04 /* libPods.a */; };
 		BFEE22EB1C16449500C8FF94 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEE22EA1C16449500C8FF94 /* main.m */; };
 		BFEE22EE1C16449500C8FF94 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEE22ED1C16449500C8FF94 /* AppDelegate.m */; };
 		BFEE22F41C16449500C8FF94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFEE22F21C16449500C8FF94 /* Main.storyboard */; };
@@ -42,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		330C74F0F2863FBE5696E1C6 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		71EFBE1D82820CAC6DBA7E04 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFEE22E61C16449500C8FF94 /* MyStackOverflowClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyStackOverflowClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFEE22EA1C16449500C8FF94 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BFEE22EC1C16449500C8FF94 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -71,6 +74,7 @@
 		BFEE23401C16697000C8FF94 /* Error.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Error.m; sourceTree = "<group>"; };
 		BFEE23431C1684E200C8FF94 /* MenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuTableViewController.h; sourceTree = "<group>"; };
 		BFEE23441C1684E200C8FF94 /* MenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuTableViewController.m; sourceTree = "<group>"; };
+		DB3675D2972BC233A46E3005 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08B9A28E9F657CADEBFD9BF8 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +103,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		98792E6B8226F33186FE5254 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				71EFBE1D82820CAC6DBA7E04 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BF8506CBCE3FE0BD19BE1435 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				330C74F0F2863FBE5696E1C6 /* Pods.debug.xcconfig */,
+				DB3675D2972BC233A46E3005 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		BFEE22DD1C16449500C8FF94 = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +127,8 @@
 				BFEE23051C16449500C8FF94 /* MyStackOverflowClientTests */,
 				BFEE23101C16449500C8FF94 /* MyStackOverflowClientUITests */,
 				BFEE22E71C16449500C8FF94 /* Products */,
+				BF8506CBCE3FE0BD19BE1435 /* Pods */,
+				98792E6B8226F33186FE5254 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -204,9 +228,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BFEE23161C16449500C8FF94 /* Build configuration list for PBXNativeTarget "MyStackOverflowClient" */;
 			buildPhases = (
+				804D6FA99137CF26EA63A6ED /* Check Pods Manifest.lock */,
 				BFEE22E21C16449500C8FF94 /* Sources */,
 				BFEE22E31C16449500C8FF94 /* Frameworks */,
 				BFEE22E41C16449500C8FF94 /* Resources */,
+				D7BB90ACAF4274572CD53F5A /* Embed Pods Frameworks */,
+				222934A0C1921BFA1ACC5155 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -321,6 +348,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		222934A0C1921BFA1ACC5155 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		804D6FA99137CF26EA63A6ED /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D7BB90ACAF4274572CD53F5A /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BFEE22E21C16449500C8FF94 /* Sources */ = {
@@ -475,6 +550,7 @@
 		};
 		BFEE23171C16449500C8FF94 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 330C74F0F2863FBE5696E1C6 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MyStackOverflowClient/Info.plist;
@@ -486,6 +562,7 @@
 		};
 		BFEE23181C16449500C8FF94 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB3675D2972BC233A46E3005 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MyStackOverflowClient/Info.plist;
