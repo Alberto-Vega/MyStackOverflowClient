@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "OAuthWebViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -18,6 +18,34 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     return YES;
+    [self checkForAccessToken];
+}
+
+- (void)checkForAccessToken {
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    
+    NSString *accessToken = [userDefaults stringForKey:@"accessToken"];
+    
+    if (!accessToken) {
+        [self fetchAccessToken];
+    }
+}
+
+- (void)fetchAccessToken {
+    UIViewController *rootViewController = self.window.rootViewController;
+    OAuthWebViewController *oAuthVC = [[OAuthWebViewController alloc]init];
+    
+    __weak typeof(oAuthVC) weakOauthVC = oAuthVC;
+    
+    oAuthVC.completion = ^() {
+        __strong typeof (oAuthVC) strongOauthVC = weakOauthVC;
+        [strongOauthVC.view removeFromSuperview];
+        [strongOauthVC removeFromParentViewController];
+    };
+    
+    [rootViewController addChildViewController:oAuthVC];
+    [rootViewController.view addSubview:oAuthVC.view];
+    [oAuthVC didMoveToParentViewController:rootViewController];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
