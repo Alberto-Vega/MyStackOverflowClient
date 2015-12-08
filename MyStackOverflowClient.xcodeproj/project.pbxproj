@@ -21,6 +21,7 @@
 		BFEE233D1C165BA300C8FF94 /* MyQuestionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEE23381C165BA300C8FF94 /* MyQuestionsViewController.m */; };
 		BFEE233E1C165BA300C8FF94 /* QuestionSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEE233A1C165BA300C8FF94 /* QuestionSearchViewController.m */; };
 		BFEE23411C16697000C8FF94 /* Error.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEE23401C16697000C8FF94 /* Error.m */; };
+		BFEE23451C1684E200C8FF94 /* MenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEE23441C1684E200C8FF94 /* MenuTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,8 @@
 		BFEE233A1C165BA300C8FF94 /* QuestionSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionSearchViewController.m; sourceTree = "<group>"; };
 		BFEE233F1C16697000C8FF94 /* Error.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Error.h; sourceTree = "<group>"; };
 		BFEE23401C16697000C8FF94 /* Error.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Error.m; sourceTree = "<group>"; };
+		BFEE23431C1684E200C8FF94 /* MenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuTableViewController.h; sourceTree = "<group>"; };
+		BFEE23441C1684E200C8FF94 /* MenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +164,8 @@
 		BFEE232F1C16581000C8FF94 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				BFEE23431C1684E200C8FF94 /* MenuTableViewController.h */,
+				BFEE23441C1684E200C8FF94 /* MenuTableViewController.m */,
 				BFEE23331C16586A00C8FF94 /* ContainerViewController */,
 				BFEE232C1C164C2D00C8FF94 /* OAuthWebViewController.h */,
 				BFEE232D1C164C2D00C8FF94 /* OAuthWebViewController.m */,
@@ -326,6 +331,7 @@
 				BFEE22F71C16449500C8FF94 /* MyStackOverflowClient.xcdatamodeld in Sources */,
 				BFEE22EE1C16449500C8FF94 /* AppDelegate.m in Sources */,
 				BFEE233E1C165BA300C8FF94 /* QuestionSearchViewController.m in Sources */,
+				BFEE23451C1684E200C8FF94 /* MenuTableViewController.m in Sources */,
 				BFEE232E1C164C2D00C8FF94 /* OAuthWebViewController.m in Sources */,
 				BFEE233C1C165BA300C8FF94 /* MyProfileViewController.m in Sources */,
 				BFEE23321C16586100C8FF94 /* MenuContainerViewController.m in Sources */,

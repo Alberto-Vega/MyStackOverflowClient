@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--My Profile View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MyProfileViewController" id="BYZ-38-t0r" customClass="MyProfileViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -24,10 +24,10 @@
             </objects>
             <point key="canvasLocation" x="1783" y="521"/>
         </scene>
-        <!--View Controller-->
+        <!--Question Search View Controller-->
         <scene sceneID="cWF-Ng-kO4">
             <objects>
-                <viewController id="KkD-Pt-LiH" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="QuestionSearchViewController" id="KkD-Pt-LiH" customClass="QuestionSearchViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YGc-QS-14f"/>
                         <viewControllerLayoutGuide type="bottom" id="tBM-FZ-VyA"/>
@@ -43,10 +43,10 @@
             </objects>
             <point key="canvasLocation" x="3091" y="507"/>
         </scene>
-        <!--View Controller-->
+        <!--My Questions View Controller-->
         <scene sceneID="Nw5-ki-dvh">
             <objects>
-                <viewController id="7wL-iJ-ADE" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MyQuestionsViewController" id="7wL-iJ-ADE" customClass="MyQuestionsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="AfN-Dp-pkV"/>
                         <viewControllerLayoutGuide type="bottom" id="cyb-Yh-RHT"/>
@@ -84,7 +84,7 @@
         <!--Menu Table View Controller-->
         <scene sceneID="Nga-Rd-1DK">
             <objects>
-                <tableViewController storyboardIdentifier="LeftMenuVC" id="RTa-oU-FdE" customClass="MenuTableViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="MenuTableViewController" id="RTa-oU-FdE" customClass="MenuTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="FdJ-AN-n20">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

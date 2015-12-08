@@ -23,25 +23,25 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    NSError *stackOverflowError = [NSError errorWithDomain:kStackOverFlowErrorDomain code:StackOverFlowTooManyAttempts userInfo:nil];
-    
-    NSError *anotherError = [NSError errorWithDomain:kStackOverFlowErrorDomain code:StackOverFlowConnectionDown userInfo:nil];
-    
-    self.myError = [NSError errorWithDomain:@"My New Error" code:1 userInfo:nil];
-    self.myError2 = [NSError errorWithDomain:NSURLErrorDomain code:2 userInfo:nil];
-    self.myError3 = [NSError errorWithDomain:NSPOSIXErrorDomain code:3 userInfo:nil];
-    self.myError4 = [NSError errorWithDomain:NSPOSIXErrorDomain code:4 userInfo:nil];
-    self.myError5 = [NSError errorWithDomain:NSPOSIXErrorDomain code:5 userInfo:nil];
-    
-    NSLog(@"%@", self.myError.localizedDescription);
-    NSLog(@"%@", self.myError2.localizedDescription);
-    NSLog(@" ");
-    NSLog(@"%@", self.myError3.localizedDescription);
-    NSLog(@"%@", self.myError4.localizedDescription);
-    NSLog(@"%@", self.myError5.localizedDescription);
-    
-    NSLog(@"%@", NSPOSIXErrorDomain);
+//
+//    NSError *stackOverflowError = [NSError errorWithDomain:kStackOverFlowErrorDomain code:StackOverFlowTooManyAttempts userInfo:nil];
+//    
+//    NSError *anotherError = [NSError errorWithDomain:kStackOverFlowErrorDomain code:StackOverFlowConnectionDown userInfo:nil];
+//    
+//    self.myError = [NSError errorWithDomain:@"My New Error" code:1 userInfo:nil];
+//    self.myError2 = [NSError errorWithDomain:NSURLErrorDomain code:2 userInfo:nil];
+//    self.myError3 = [NSError errorWithDomain:NSPOSIXErrorDomain code:3 userInfo:nil];
+//    self.myError4 = [NSError errorWithDomain:NSPOSIXErrorDomain code:4 userInfo:nil];
+//    self.myError5 = [NSError errorWithDomain:NSPOSIXErrorDomain code:5 userInfo:nil];
+//    
+//    NSLog(@"%@", self.myError.localizedDescription);
+//    NSLog(@"%@", self.myError2.localizedDescription);
+//    NSLog(@" ");
+//    NSLog(@"%@", self.myError3.localizedDescription);
+//    NSLog(@"%@", self.myError4.localizedDescription);
+//    NSLog(@"%@", self.myError5.localizedDescription);
+//    
+//    NSLog(@"%@", NSPOSIXErrorDomain);
 }
 
 @end

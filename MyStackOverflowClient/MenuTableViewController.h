@@ -1,5 +1,5 @@
 //
-//  QuestionSearchViewController.h
+//  MenuTableViewController.h
 //  MyStackOverflowClient
 //
 //  Created by Alberto Vega Gonzalez on 12/7/15.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface QuestionSearchViewController : UITableViewController
+@interface MenuTableViewController : UITableViewController
 
 @end
