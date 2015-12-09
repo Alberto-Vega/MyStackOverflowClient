@@ -14,6 +14,7 @@
 		BF01533C1C17B85100CA2967 /* SOSearchJSONParser.m in Sources */ = {isa = PBXBuildFile; fileRef = BF01533B1C17B85100CA2967 /* SOSearchJSONParser.m */; };
 		BF01533F1C17B9E000CA2967 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = BF01533E1C17B9E000CA2967 /* User.m */; };
 		BF0153421C17BE2100CA2967 /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = BF0153411C17BE2100CA2967 /* Question.m */; };
+		BF0153451C18CFCD00CA2967 /* ImageFetcherService.m in Sources */ = {isa = PBXBuildFile; fileRef = BF0153441C18CFCD00CA2967 /* ImageFetcherService.m */; };
 		BFEE22EB1C16449500C8FF94 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEE22EA1C16449500C8FF94 /* main.m */; };
 		BFEE22EE1C16449500C8FF94 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEE22ED1C16449500C8FF94 /* AppDelegate.m */; };
 		BFEE22F41C16449500C8FF94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFEE22F21C16449500C8FF94 /* Main.storyboard */; };
@@ -64,6 +65,8 @@
 		BF01533E1C17B9E000CA2967 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		BF0153401C17BE2100CA2967 /* Question.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Question.h; sourceTree = "<group>"; };
 		BF0153411C17BE2100CA2967 /* Question.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Question.m; sourceTree = "<group>"; };
+		BF0153431C18CFCD00CA2967 /* ImageFetcherService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageFetcherService.h; sourceTree = "<group>"; };
+		BF0153441C18CFCD00CA2967 /* ImageFetcherService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageFetcherService.m; sourceTree = "<group>"; };
 		BFEE22E61C16449500C8FF94 /* MyStackOverflowClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyStackOverflowClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFEE22EA1C16449500C8FF94 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BFEE22EC1C16449500C8FF94 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -141,6 +144,8 @@
 				BF0153381C17B59900CA2967 /* SOMyQuestionsAPIService.m */,
 				BF01533A1C17B85100CA2967 /* SOSearchJSONParser.h */,
 				BF01533B1C17B85100CA2967 /* SOSearchJSONParser.m */,
+				BF0153431C18CFCD00CA2967 /* ImageFetcherService.h */,
+				BF0153441C18CFCD00CA2967 /* ImageFetcherService.m */,
 				BF01533D1C17B9E000CA2967 /* User.h */,
 				BF01533E1C17B9E000CA2967 /* User.m */,
 				BF0153401C17BE2100CA2967 /* Question.h */,
@@ -442,6 +447,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF0153451C18CFCD00CA2967 /* ImageFetcherService.m in Sources */,
 				BFEE23411C16697000C8FF94 /* Error.m in Sources */,
 				BF0153391C17B59900CA2967 /* SOMyQuestionsAPIService.m in Sources */,
 				BFEE22F71C16449500C8FF94 /* MyStackOverflowClient.xcdatamodeld in Sources */,
