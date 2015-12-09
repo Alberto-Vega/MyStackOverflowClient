@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		08B9A28E9F657CADEBFD9BF8 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 71EFBE1D82820CAC6DBA7E04 /* libPods.a */; };
+		BF0153301C178FB600CA2967 /* JSONAPIRequestService.m in Sources */ = {isa = PBXBuildFile; fileRef = BF01532F1C178FB600CA2967 /* JSONAPIRequestService.m */; };
+		BF0153361C1797A600CA2967 /* SOSearchAPIService.m in Sources */ = {isa = PBXBuildFile; fileRef = BF0153351C1797A600CA2967 /* SOSearchAPIService.m */; };
 		BFEE22EB1C16449500C8FF94 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEE22EA1C16449500C8FF94 /* main.m */; };
 		BFEE22EE1C16449500C8FF94 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEE22ED1C16449500C8FF94 /* AppDelegate.m */; };
 		BFEE22F41C16449500C8FF94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFEE22F21C16449500C8FF94 /* Main.storyboard */; };
@@ -45,6 +47,11 @@
 /* Begin PBXFileReference section */
 		330C74F0F2863FBE5696E1C6 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		71EFBE1D82820CAC6DBA7E04 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF01532E1C178FB600CA2967 /* JSONAPIRequestService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONAPIRequestService.h; sourceTree = "<group>"; };
+		BF01532F1C178FB600CA2967 /* JSONAPIRequestService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONAPIRequestService.m; sourceTree = "<group>"; };
+		BF0153311C17907000CA2967 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		BF0153341C1797A600CA2967 /* SOSearchAPIService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOSearchAPIService.h; sourceTree = "<group>"; };
+		BF0153351C1797A600CA2967 /* SOSearchAPIService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOSearchAPIService.m; sourceTree = "<group>"; };
 		BFEE22E61C16449500C8FF94 /* MyStackOverflowClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyStackOverflowClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFEE22EA1C16449500C8FF94 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BFEE22EC1C16449500C8FF94 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -111,6 +118,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		BF01532D1C178F8C00CA2967 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BF01532E1C178FB600CA2967 /* JSONAPIRequestService.h */,
+				BF01532F1C178FB600CA2967 /* JSONAPIRequestService.m */,
+				BF0153341C1797A600CA2967 /* SOSearchAPIService.h */,
+				BF0153351C1797A600CA2967 /* SOSearchAPIService.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		BF8506CBCE3FE0BD19BE1435 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -145,6 +163,7 @@
 		BFEE22E81C16449500C8FF94 /* MyStackOverflowClient */ = {
 			isa = PBXGroup;
 			children = (
+				BF01532D1C178F8C00CA2967 /* Model */,
 				BFEE22EC1C16449500C8FF94 /* AppDelegate.h */,
 				BFEE22ED1C16449500C8FF94 /* AppDelegate.m */,
 				BFEE232F1C16581000C8FF94 /* Controllers */,
@@ -163,6 +182,7 @@
 			children = (
 				BFEE23421C166A7600C8FF94 /* Error */,
 				BFEE22EA1C16449500C8FF94 /* main.m */,
+				BF0153311C17907000CA2967 /* Constants.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -408,9 +428,11 @@
 				BFEE233E1C165BA300C8FF94 /* QuestionSearchViewController.m in Sources */,
 				BFEE23451C1684E200C8FF94 /* MenuTableViewController.m in Sources */,
 				BFEE232E1C164C2D00C8FF94 /* OAuthWebViewController.m in Sources */,
+				BF0153301C178FB600CA2967 /* JSONAPIRequestService.m in Sources */,
 				BFEE233C1C165BA300C8FF94 /* MyProfileViewController.m in Sources */,
 				BFEE23321C16586100C8FF94 /* MenuContainerViewController.m in Sources */,
 				BFEE233D1C165BA300C8FF94 /* MyQuestionsViewController.m in Sources */,
+				BF0153361C1797A600CA2967 /* SOSearchAPIService.m in Sources */,
 				BFEE22EB1C16449500C8FF94 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
