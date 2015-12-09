@@ -11,6 +11,8 @@
 		BF0153301C178FB600CA2967 /* JSONAPIRequestService.m in Sources */ = {isa = PBXBuildFile; fileRef = BF01532F1C178FB600CA2967 /* JSONAPIRequestService.m */; };
 		BF0153361C1797A600CA2967 /* SOSearchAPIService.m in Sources */ = {isa = PBXBuildFile; fileRef = BF0153351C1797A600CA2967 /* SOSearchAPIService.m */; };
 		BF0153391C17B59900CA2967 /* SOMyQuestionsAPIService.m in Sources */ = {isa = PBXBuildFile; fileRef = BF0153381C17B59900CA2967 /* SOMyQuestionsAPIService.m */; };
+		BF01533C1C17B85100CA2967 /* SOSearchJSONParser.m in Sources */ = {isa = PBXBuildFile; fileRef = BF01533B1C17B85100CA2967 /* SOSearchJSONParser.m */; };
+		BF01533F1C17B9E000CA2967 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = BF01533E1C17B9E000CA2967 /* User.m */; };
 		BFEE22EB1C16449500C8FF94 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEE22EA1C16449500C8FF94 /* main.m */; };
 		BFEE22EE1C16449500C8FF94 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEE22ED1C16449500C8FF94 /* AppDelegate.m */; };
 		BFEE22F41C16449500C8FF94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFEE22F21C16449500C8FF94 /* Main.storyboard */; };
@@ -55,6 +57,10 @@
 		BF0153351C1797A600CA2967 /* SOSearchAPIService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOSearchAPIService.m; sourceTree = "<group>"; };
 		BF0153371C17B59900CA2967 /* SOMyQuestionsAPIService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOMyQuestionsAPIService.h; sourceTree = "<group>"; };
 		BF0153381C17B59900CA2967 /* SOMyQuestionsAPIService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOMyQuestionsAPIService.m; sourceTree = "<group>"; };
+		BF01533A1C17B85100CA2967 /* SOSearchJSONParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOSearchJSONParser.h; sourceTree = "<group>"; };
+		BF01533B1C17B85100CA2967 /* SOSearchJSONParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOSearchJSONParser.m; sourceTree = "<group>"; };
+		BF01533D1C17B9E000CA2967 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		BF01533E1C17B9E000CA2967 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		BFEE22E61C16449500C8FF94 /* MyStackOverflowClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyStackOverflowClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFEE22EA1C16449500C8FF94 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BFEE22EC1C16449500C8FF94 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -130,6 +136,10 @@
 				BF0153351C1797A600CA2967 /* SOSearchAPIService.m */,
 				BF0153371C17B59900CA2967 /* SOMyQuestionsAPIService.h */,
 				BF0153381C17B59900CA2967 /* SOMyQuestionsAPIService.m */,
+				BF01533A1C17B85100CA2967 /* SOSearchJSONParser.h */,
+				BF01533B1C17B85100CA2967 /* SOSearchJSONParser.m */,
+				BF01533D1C17B9E000CA2967 /* User.h */,
+				BF01533E1C17B9E000CA2967 /* User.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -431,6 +441,8 @@
 				BF0153391C17B59900CA2967 /* SOMyQuestionsAPIService.m in Sources */,
 				BFEE22F71C16449500C8FF94 /* MyStackOverflowClient.xcdatamodeld in Sources */,
 				BFEE22EE1C16449500C8FF94 /* AppDelegate.m in Sources */,
+				BF01533C1C17B85100CA2967 /* SOSearchJSONParser.m in Sources */,
+				BF01533F1C17B9E000CA2967 /* User.m in Sources */,
 				BFEE233E1C165BA300C8FF94 /* QuestionSearchViewController.m in Sources */,
 				BFEE23451C1684E200C8FF94 /* MenuTableViewController.m in Sources */,
 				BFEE232E1C164C2D00C8FF94 /* OAuthWebViewController.m in Sources */,
