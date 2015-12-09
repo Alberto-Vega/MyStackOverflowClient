@@ -17,6 +17,7 @@
 		BF0153451C18CFCD00CA2967 /* ImageFetcherService.m in Sources */ = {isa = PBXBuildFile; fileRef = BF0153441C18CFCD00CA2967 /* ImageFetcherService.m */; };
 		BF01534D1C18DF0E00CA2967 /* SOSearchSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = BF01534C1C18DF0E00CA2967 /* SOSearchSettings.m */; };
 		BF0153501C18E23000CA2967 /* CFSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = BF01534F1C18E23000CA2967 /* CFSettings.m */; };
+		BF0153531C18F3FF00CA2967 /* SearchResultTableViewCell.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF0153521C18F3FF00CA2967 /* SearchResultTableViewCell.storyboard */; };
 		BFEE22EB1C16449500C8FF94 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEE22EA1C16449500C8FF94 /* main.m */; };
 		BFEE22EE1C16449500C8FF94 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEE22ED1C16449500C8FF94 /* AppDelegate.m */; };
 		BFEE22F41C16449500C8FF94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFEE22F21C16449500C8FF94 /* Main.storyboard */; };
@@ -73,6 +74,7 @@
 		BF01534C1C18DF0E00CA2967 /* SOSearchSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOSearchSettings.m; sourceTree = "<group>"; };
 		BF01534E1C18E23000CA2967 /* CFSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFSettings.h; sourceTree = "<group>"; };
 		BF01534F1C18E23000CA2967 /* CFSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFSettings.m; sourceTree = "<group>"; };
+		BF0153521C18F3FF00CA2967 /* SearchResultTableViewCell.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SearchResultTableViewCell.storyboard; sourceTree = "<group>"; };
 		BFEE22E61C16449500C8FF94 /* MyStackOverflowClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyStackOverflowClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFEE22EA1C16449500C8FF94 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BFEE22EC1C16449500C8FF94 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -142,14 +144,12 @@
 		BF01532D1C178F8C00CA2967 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BF01534A1C18DEEE00CA2967 /* Settings */,
 				BF0153461C18DDCA00CA2967 /* RequestServices */,
 				BF0153471C18DE2100CA2967 /* SO API */,
 				BF0153371C17B59900CA2967 /* SOMyQuestionsAPIService.h */,
 				BF0153381C17B59900CA2967 /* SOMyQuestionsAPIService.m */,
-				BF01533D1C17B9E000CA2967 /* User.h */,
-				BF01533E1C17B9E000CA2967 /* User.m */,
-				BF0153401C17BE2100CA2967 /* Question.h */,
-				BF0153411C17BE2100CA2967 /* Question.m */,
+				BF0153511C18E50300CA2967 /* Data */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -168,7 +168,6 @@
 		BF0153471C18DE2100CA2967 /* SO API */ = {
 			isa = PBXGroup;
 			children = (
-				BF01534A1C18DEEE00CA2967 /* Settings */,
 				BF0153481C18DE4800CA2967 /* Web Request */,
 				BF0153491C18DE5400CA2967 /* JSON Parsers */,
 			);
@@ -202,6 +201,27 @@
 				BF01534F1C18E23000CA2967 /* CFSettings.m */,
 			);
 			name = Settings;
+			sourceTree = "<group>";
+		};
+		BF0153511C18E50300CA2967 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				BF01533D1C17B9E000CA2967 /* User.h */,
+				BF01533E1C17B9E000CA2967 /* User.m */,
+				BF0153401C17BE2100CA2967 /* Question.h */,
+				BF0153411C17BE2100CA2967 /* Question.m */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+		BF0153541C18F40F00CA2967 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BFEE22F21C16449500C8FF94 /* Main.storyboard */,
+				BF0153521C18F3FF00CA2967 /* SearchResultTableViewCell.storyboard */,
+				BFEE22FA1C16449500C8FF94 /* LaunchScreen.storyboard */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		BF8506CBCE3FE0BD19BE1435 /* Pods */ = {
@@ -242,9 +262,8 @@
 				BFEE22EC1C16449500C8FF94 /* AppDelegate.h */,
 				BFEE22ED1C16449500C8FF94 /* AppDelegate.m */,
 				BFEE232F1C16581000C8FF94 /* Controllers */,
-				BFEE22F21C16449500C8FF94 /* Main.storyboard */,
+				BF0153541C18F40F00CA2967 /* Views */,
 				BFEE22F81C16449500C8FF94 /* Assets.xcassets */,
-				BFEE22FA1C16449500C8FF94 /* LaunchScreen.storyboard */,
 				BFEE22FD1C16449500C8FF94 /* Info.plist */,
 				BFEE22F51C16449500C8FF94 /* MyStackOverflowClient.xcdatamodeld */,
 				BFEE22E91C16449500C8FF94 /* Supporting Files */,
@@ -425,6 +444,7 @@
 				BFEE22FC1C16449500C8FF94 /* LaunchScreen.storyboard in Resources */,
 				BFEE22F91C16449500C8FF94 /* Assets.xcassets in Resources */,
 				BFEE22F41C16449500C8FF94 /* Main.storyboard in Resources */,
+				BF0153531C18F3FF00CA2967 /* SearchResultTableViewCell.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
