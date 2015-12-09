@@ -11,7 +11,7 @@
 
 @interface JSONAPIRequestService : NSObject
 
-+ (void) getRequestWithURL:(NSString * _Nonnull)url parameters:(NSDictionary*)parameters withCompletion:(kNSDataCompletionHandler _Nonnull)completionHandler;
++ (void) getRequestWithURL:(NSString * _Nonnull)url parameters:(NSDictionary* _Nonnull)parameters withCompletion:(kNSDataCompletionHandler _Nonnull)completionHandler;
 + (void)postRequestWithURL: (NSString * _Nonnull)url parameters:(NSDictionary*_Nullable)parameters withCompletion:(kNSDataCompletionHandler _Nonnull)completionHandler;
 + (void)deleteRequestWithURL:(NSString * _Nonnull)url parameters:(NSDictionary*_Nullable)parameters withCompletion:(kNSDataCompletionHandler _Nonnull)completionHandler;
 
