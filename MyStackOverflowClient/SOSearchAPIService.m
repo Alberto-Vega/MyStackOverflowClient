@@ -121,7 +121,28 @@ NSString *kSOAPIBaseURL = @"https://api.stackexchange.com/2.2/";
     [JSONAPIRequestService getRequestWithURL:searchUrlString parameters:(NSDictionary *)parameters  withCompletion:^(NSData * _Nullable data, NSError * _Nullable error) {
         [self dictionaryCompletionHelperWithData: data withError: error withCompletionHandler: completionHandler];
     }];
+}
+
+#pragma mark - completion handler conversion helpers
+
+- (void) dictionaryCompletionHelperWithData:(NSData *)data withError:(NSError *)error withCompletionHandler:(kNSDictionaryCompletionHandler)completionHandler {
     
+    if (error == nil) {
+        NSDictionary *dictionary = (NSDictionary *) data;
+        completionHandler(dictionary, nil);
+        return;
+    }
+    completionHandler(nil, error);
+}
+
+- (void) arrayCompletionHelperWithData: (NSData *)data withError:(NSError *)error withCompletionHandler: (kNSArrayCompletionHandler)completionHandler {
+    
+    if (error ==  nil) {
+        NSArray *array = (NSArray*) data;
+        completionHandler(array, nil);
+        return;
+    }
+    completionHandler(nil, error);
 }
 
 @end
