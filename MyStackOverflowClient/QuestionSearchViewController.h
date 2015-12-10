@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Question.
+#import "Question.h"
 
 @interface QuestionSearchViewController : UITableViewController
 
