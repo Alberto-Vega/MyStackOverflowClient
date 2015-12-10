@@ -17,7 +17,7 @@
 		BF0153451C18CFCD00CA2967 /* ImageFetcherService.m in Sources */ = {isa = PBXBuildFile; fileRef = BF0153441C18CFCD00CA2967 /* ImageFetcherService.m */; };
 		BF01534D1C18DF0E00CA2967 /* SOSearchSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = BF01534C1C18DF0E00CA2967 /* SOSearchSettings.m */; };
 		BF0153501C18E23000CA2967 /* CFSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = BF01534F1C18E23000CA2967 /* CFSettings.m */; };
-		BF0153531C18F3FF00CA2967 /* SearchResultTableViewCell.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF0153521C18F3FF00CA2967 /* SearchResultTableViewCell.storyboard */; };
+		BF0153561C19095E00CA2967 /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF0153551C19095E00CA2967 /* SearchTableViewCell.xib */; };
 		BFEE22EB1C16449500C8FF94 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEE22EA1C16449500C8FF94 /* main.m */; };
 		BFEE22EE1C16449500C8FF94 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEE22ED1C16449500C8FF94 /* AppDelegate.m */; };
 		BFEE22F41C16449500C8FF94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFEE22F21C16449500C8FF94 /* Main.storyboard */; };
@@ -74,7 +74,7 @@
 		BF01534C1C18DF0E00CA2967 /* SOSearchSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOSearchSettings.m; sourceTree = "<group>"; };
 		BF01534E1C18E23000CA2967 /* CFSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFSettings.h; sourceTree = "<group>"; };
 		BF01534F1C18E23000CA2967 /* CFSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFSettings.m; sourceTree = "<group>"; };
-		BF0153521C18F3FF00CA2967 /* SearchResultTableViewCell.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SearchResultTableViewCell.storyboard; sourceTree = "<group>"; };
+		BF0153551C19095E00CA2967 /* SearchTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchTableViewCell.xib; sourceTree = "<group>"; };
 		BFEE22E61C16449500C8FF94 /* MyStackOverflowClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyStackOverflowClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFEE22EA1C16449500C8FF94 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BFEE22EC1C16449500C8FF94 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -217,8 +217,8 @@
 		BF0153541C18F40F00CA2967 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BF0153551C19095E00CA2967 /* SearchTableViewCell.xib */,
 				BFEE22F21C16449500C8FF94 /* Main.storyboard */,
-				BF0153521C18F3FF00CA2967 /* SearchResultTableViewCell.storyboard */,
 				BFEE22FA1C16449500C8FF94 /* LaunchScreen.storyboard */,
 			);
 			name = Views;
@@ -442,9 +442,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFEE22FC1C16449500C8FF94 /* LaunchScreen.storyboard in Resources */,
+				BF0153561C19095E00CA2967 /* SearchTableViewCell.xib in Resources */,
 				BFEE22F91C16449500C8FF94 /* Assets.xcassets in Resources */,
 				BFEE22F41C16449500C8FF94 /* Main.storyboard in Resources */,
-				BF0153531C18F3FF00CA2967 /* SearchResultTableViewCell.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

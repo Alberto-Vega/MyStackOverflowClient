@@ -118,8 +118,20 @@ NSString *kSOAPIBaseURL = @"https://api.stackexchange.com/2.2/";
     [parameters setObject:searchTermParam forKey:@"title"];
     [parameters setObject:@"stackoverflow" forKey:@"site"];
     
-    [JSONAPIRequestService getRequestWithURL:searchUrlString parameters:(NSDictionary *)parameters  withCompletion:^(NSData * _Nullable data, NSError * _Nullable error) {
-        [self dictionaryCompletionHelperWithData: data withError: error withCompletionHandler: completionHandler];
+    [JSONAPIRequestService getRequestWithURL:searchUrlString parameters:(NSDictionary *)parameters  withCompletion:^(id _Nullable data, NSError * _Nullable error) {
+        
+        if (error != nil) {
+            completionHandler(nil, error);
+            return;
+        }
+        
+        if ([data isKindOfClass:[NSArray class]]) {
+            completionHandler((NSArray *) data, nil);
+            return;
+        }
+        
+        NSError *dictionaryError = [NSError errorWithDomain:@"TYPE ERROR: Converting response object to Dictionary" code:-1 userInfo:nil];
+        completionHandler(nil, dictionaryError);
     }];
 }
 
