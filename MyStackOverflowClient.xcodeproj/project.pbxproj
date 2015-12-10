@@ -18,6 +18,7 @@
 		BF01534D1C18DF0E00CA2967 /* SOSearchSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = BF01534C1C18DF0E00CA2967 /* SOSearchSettings.m */; };
 		BF0153501C18E23000CA2967 /* CFSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = BF01534F1C18E23000CA2967 /* CFSettings.m */; };
 		BF0153561C19095E00CA2967 /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF0153551C19095E00CA2967 /* SearchTableViewCell.xib */; };
+		BF0153591C1911B600CA2967 /* SearchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BF0153581C1911B600CA2967 /* SearchTableViewCell.m */; };
 		BFEE22EB1C16449500C8FF94 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEE22EA1C16449500C8FF94 /* main.m */; };
 		BFEE22EE1C16449500C8FF94 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEE22ED1C16449500C8FF94 /* AppDelegate.m */; };
 		BFEE22F41C16449500C8FF94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFEE22F21C16449500C8FF94 /* Main.storyboard */; };
@@ -75,6 +76,8 @@
 		BF01534E1C18E23000CA2967 /* CFSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFSettings.h; sourceTree = "<group>"; };
 		BF01534F1C18E23000CA2967 /* CFSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFSettings.m; sourceTree = "<group>"; };
 		BF0153551C19095E00CA2967 /* SearchTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchTableViewCell.xib; sourceTree = "<group>"; };
+		BF0153571C1911B600CA2967 /* SearchTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchTableViewCell.h; sourceTree = "<group>"; };
+		BF0153581C1911B600CA2967 /* SearchTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchTableViewCell.m; sourceTree = "<group>"; };
 		BFEE22E61C16449500C8FF94 /* MyStackOverflowClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyStackOverflowClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFEE22EA1C16449500C8FF94 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BFEE22EC1C16449500C8FF94 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -309,6 +312,8 @@
 				BFEE232D1C164C2D00C8FF94 /* OAuthWebViewController.m */,
 				BFEE23391C165BA300C8FF94 /* QuestionSearchViewController.h */,
 				BFEE233A1C165BA300C8FF94 /* QuestionSearchViewController.m */,
+				BF0153571C1911B600CA2967 /* SearchTableViewCell.h */,
+				BF0153581C1911B600CA2967 /* SearchTableViewCell.m */,
 				BFEE23351C165BA300C8FF94 /* MyProfileViewController.h */,
 				BFEE23361C165BA300C8FF94 /* MyProfileViewController.m */,
 				BFEE23371C165BA300C8FF94 /* MyQuestionsViewController.h */,
@@ -526,6 +531,7 @@
 				BF01533F1C17B9E000CA2967 /* User.m in Sources */,
 				BFEE233E1C165BA300C8FF94 /* QuestionSearchViewController.m in Sources */,
 				BF0153501C18E23000CA2967 /* CFSettings.m in Sources */,
+				BF0153591C1911B600CA2967 /* SearchTableViewCell.m in Sources */,
 				BFEE23451C1684E200C8FF94 /* MenuTableViewController.m in Sources */,
 				BFEE232E1C164C2D00C8FF94 /* OAuthWebViewController.m in Sources */,
 				BF01534D1C18DF0E00CA2967 /* SOSearchSettings.m in Sources */,

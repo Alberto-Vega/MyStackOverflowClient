@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Question.h"
 
 @interface SearchTableViewCell : UITableViewCell
+@property Question *question;
 
 @end
