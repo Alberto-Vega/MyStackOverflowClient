@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "Question.h"
 
-@interface QuestionSearchViewController : UITableViewController
+@interface QuestionSearchViewController : UIViewController
 
 @end

@@ -8,77 +8,21 @@
 
 #import "SOSearchAPIService.h"
 #import "JSONAPIRequestService.h"
+#import "SOSearchSettings.h"
 
 @implementation SOSearchAPIService
 NSString *kSOAPIBaseURL = @"https://api.stackexchange.com/2.2/";
 
-#pragma mark class methods
-+(SOSearchAPIService *)sharedServide {
-    static SOSearchAPIService *sharedService;
-    if (!sharedService) {
-        sharedService = [[SOSearchAPIService alloc] init];
-        return sharedService;
-    }
-    return sharedService;
-}
 
-#pragma mark private Methods
-
--(id)init {
-    if (self = [super init]) {
-        
-        //Initialization code here
-        [self setSort:Activity];
-        [self setOrder:Descending];
-    }
-    return self;
-}
-
--(NSString *) getSortForURLParam {
-    switch (self.sort) {
-        case Activity:
-            return @"activity";
-            break;
-        case Creation:
-            return @"creation";
-            break;
-        case Relevance:
-            return @"relevance";
-            break;
-        case Votes:
-            return @"votes";
-            break;
-        default:
-            return @"activity";
-            break;
-    }
-}
-
--(NSString *) getOrderForURLParam {
-    switch (self.order) {
-        case Descending:
-            return @"desc";
-            break;
-        case Ascending:
-            return @"asc";
-            break;
-        default:
-            return @"desc";
-            break;
-    }
-}
-
-#pragma mark public Methods
-
-- (void) searchWithTerm:(NSString *)searchTermParam withCompletion:(kNSDictionaryCompletionHandler)completionHandler {
++(void )searchWithTerm:(NSString * _Nonnull)searchTermParam withCompletion:(kNSDictionaryCompletionHandler _Nonnull)completionHandler {
     [self searchWithTerm:searchTermParam pageNumber:1 withCompletion:completionHandler];
 }
 
-- (void) searchWithTerm:(NSString * _Nonnull)searchTermParam pageNumber:(int)pageNumberParam withCompletion:(kNSDictionaryCompletionHandler _Nonnull)completionHandler {
++(void) searchWithTerm:(NSString * _Nonnull)searchTermParam pageNumber:(int)pageNumberParam withCompletion:(kNSDictionaryCompletionHandler _Nonnull)completionHandler {
     
     NSString *searchUrlString = [NSString stringWithFormat:@"%@search", kSOAPIBaseURL];
-    NSString *sortParam = [self getSortForURLParam];
-    NSString *orderParam = [self getOrderForURLParam];
+    NSString *sortParam = [[SOSearchSettings sharedService ] getSortParameterForUrl ];
+    NSString *orderParam = [[SOSearchSettings sharedService ] getOrderParameterForUrl];
     NSString *pageNumber;
     
     if (pageNumberParam > 0) {
@@ -94,16 +38,27 @@ NSString *kSOAPIBaseURL = @"https://api.stackexchange.com/2.2/";
     [parameters setObject:searchTermParam forKey:@"intitle"];
     [parameters setObject:@"stackoverflow" forKey:@"site"];
     
-    [JSONAPIRequestService getRequestWithURL:searchUrlString parameters:(NSDictionary *)parameters withCompletion:^(NSData * _Nullable data, NSError * _Nullable error) {
-        [self dictionaryCompletionHelperWithData: data withError: error withCompletionHandler: completionHandler];
+    [JSONAPIRequestService getRequestWithURL:searchUrlString parameters:(NSDictionary*)parameters withCompletion:^(id _Nullable data, NSError * _Nullable error) {
+        if (error != nil) {
+            completionHandler(nil, error);
+            return ;
+        }
+        
+        if ([data isKindOfClass:[NSDictionary class]]) {
+            completionHandler((NSDictionary * ) data, nil);
+            return;
+        }
+        
+        NSError *dictionaryError = [NSError errorWithDomain:@"TYPE ERROR: Converting response object to Dictionary" code:-1 userInfo:nil];
+        completionHandler(nil, dictionaryError);
     }];
 }
 
-- (void) searchSimilarWithTerm:(NSString *)searchTermParam pageNumber:(int)pageNumberParam withCompletion:(kNSDictionaryCompletionHandler)completionHandler {
++(void) searchSimilarWithTerm:(NSString * _Nonnull)searchTermParam pageNumber:(int)pageNumberParam withCompletion:(kNSDictionaryCompletionHandler _Nonnull)completionHandler {
     
     NSString *searchUrlString = [NSString stringWithFormat:@"%@similar", kSOAPIBaseURL];
-    NSString *sortParam = [self getSortForURLParam];
-    NSString *orderParam = [self getOrderForURLParam];
+    NSString *sortParam = [[SOSearchSettings sharedService] getSortParameterForUrl];
+    NSString *orderParam = [[SOSearchSettings sharedService] getOrderParameterForUrl];
     NSString *pageNumber;
     if (pageNumberParam > 0) {
         pageNumber = [NSString stringWithFormat:@"%d", pageNumberParam];
@@ -118,15 +73,16 @@ NSString *kSOAPIBaseURL = @"https://api.stackexchange.com/2.2/";
     [parameters setObject:searchTermParam forKey:@"title"];
     [parameters setObject:@"stackoverflow" forKey:@"site"];
     
-    [JSONAPIRequestService getRequestWithURL:searchUrlString parameters:(NSDictionary *)parameters  withCompletion:^(id _Nullable data, NSError * _Nullable error) {
-        
+    [JSONAPIRequestService getRequestWithURL:searchUrlString parameters:(NSDictionary*)parameters withCompletion:^(id _Nullable data, NSError * _Nullable error) {
         if (error != nil) {
             completionHandler(nil, error);
-            return;
+            return ;
         }
         
-        if ([data isKindOfClass:[NSArray class]]) {
-            completionHandler((NSArray *) data, nil);
+        
+        
+        if ([data isKindOfClass:[NSDictionary class]]) {
+            completionHandler((NSDictionary * ) data, nil);
             return;
         }
         
@@ -135,26 +91,5 @@ NSString *kSOAPIBaseURL = @"https://api.stackexchange.com/2.2/";
     }];
 }
 
-#pragma mark - completion handler conversion helpers
-
-- (void) dictionaryCompletionHelperWithData:(NSData *)data withError:(NSError *)error withCompletionHandler:(kNSDictionaryCompletionHandler)completionHandler {
-    
-    if (error == nil) {
-        NSDictionary *dictionary = (NSDictionary *) data;
-        completionHandler(dictionary, nil);
-        return;
-    }
-    completionHandler(nil, error);
-}
-
-- (void) arrayCompletionHelperWithData: (NSData *)data withError:(NSError *)error withCompletionHandler: (kNSArrayCompletionHandler)completionHandler {
-    
-    if (error ==  nil) {
-        NSArray *array = (NSArray*) data;
-        completionHandler(array, nil);
-        return;
-    }
-    completionHandler(nil, error);
-}
 
 @end

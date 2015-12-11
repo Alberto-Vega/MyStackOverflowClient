@@ -9,7 +9,7 @@
 #import "MenuContainerViewController.h"
 #import "MenuTableViewController.h"
 #import "MyProfileViewController.h"
-//#import "QuestionSearchViewController.h"
+#import "QuestionSearchViewController.h"
 #import "MyQuestionsViewController.h"
 
 CGFloat const kBurgerOpenScreenDivider = 3.0;
@@ -22,7 +22,7 @@ NSTimeInterval const kTimeToSlideMenuOpen = 0.2;
 @interface MenuContainerViewController ()<UITableViewDelegate>
 
 @property (strong, nonatomic) MenuTableViewController *leftMenuViewController;
-@property (strong, nonatomic) MyProfileViewController *topViewController;
+@property (strong, nonatomic) QuestionSearchViewController *topViewController;
 @property (strong, nonatomic) MyQuestionsViewController *myQuestionsViewController;
 
 @property(strong, nonatomic) UIButton *burgerButton;
@@ -69,7 +69,7 @@ NSTimeInterval const kTimeToSlideMenuOpen = 0.2;
 }
 
 - (void)setupMainContentViewController {
-    MyProfileViewController *contentViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"MyProfileViewController"];
+    QuestionSearchViewController *contentViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"QuestionSearchViewController"];
     
     [self addChildViewController:contentViewController];
     contentViewController.view.frame = self.view.frame;

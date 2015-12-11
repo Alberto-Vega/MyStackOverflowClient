@@ -7,22 +7,37 @@
 //
 
 #import "QuestionSearchViewController.h"
+#import "SOSearchAPIService.h"
+#import "SOSearchJSONParser.h"
+#import "Question.h"
 #import "Error.h"
+#import "SearchTableViewCell.h"
 
-@interface QuestionSearchViewController ()
+@interface QuestionSearchViewController () < UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate>
 //@property(strong, nonatomic) NSError *myError;
 //@property(strong, nonatomic) NSError *myError2;
 //@property(strong, nonatomic) NSError *myError3;
 //@property(strong, nonatomic) NSError *myError4;
 //@property(strong, nonatomic) NSError *myError5;
 
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
+
+@property (strong, nonatomic) NSArray<Question*> *Questions;
 
 @end
 
 @implementation QuestionSearchViewController
 
+- (void) setQuestions:(NSArray<Question *> *)Questions {
+    _Questions = Questions;
+    [self.tableView reloadData];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setupMainViewController];
 //
 //    NSError *stackOverflowError = [NSError errorWithDomain:kStackOverFlowErrorDomain code:StackOverFlowTooManyAttempts userInfo:nil];
 //    
@@ -42,6 +57,64 @@
 //    NSLog(@"%@", self.myError5.localizedDescription);
 //    
 //    NSLog(@"%@", NSPOSIXErrorDomain);
+}
+
+- (void) setupMainViewController {
+    [self.tableView setDelegate:self];
+    [self.tableView setDataSource:self];
+    [self.searchBar setDelegate:self];
+    
+    [self fetchResultsForSearchTerm:@"hello world"];
+    
+    UINib *nib = [ UINib nibWithNibName:@"SearchResultTableViewCell" bundle:nil];
+    [[self tableView] registerNib:nib forCellReuseIdentifier:@"SearchTableViewCell"];
+}
+
+- (void) fetchResultsForSearchTerm:(NSString*)searchTerm {
+    
+    [SOSearchAPIService searchSimilarWithTerm:searchTerm pageNumber:0 withCompletion: ^(NSDictionary *_Nullable data, NSError *_Nullable error) {
+        
+        if (error == nil) {
+            
+            NSLog(@"Success Requesting SOSearchAPIService SOSearchAPIService*");
+            [SOSearchJSONParser questionsArrayFromDictionary:data completionHandler:^(NSArray * _Nullable data, NSError * _Nullable error) {
+                if (error ==  nil && data != nil)  {
+                    NSLog(@"\n\nSuccess Parsing SearchGetRequest\n");
+                    [self setQuestions:data];
+                    return;
+                }
+                NSLog(@"Failure ParsingSOSearchJSONParser questionsArrayFromDictionary");
+                NSLog(@"%@\n\n", error.description);
+            }];
+            return;
+        }
+        NSLog(@"Failure Requesting SOSearchAPIService SOSearchAPIService*\n\n");
+        NSLog(@"%@\n\n", error.description);
+    }];
+}
+
+#pragma mark - UITableView protocol functions
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    if (self.Questions != nil) {
+        return self.Questions.count;
+    }
+    return 0;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    SearchTableViewCell *cell = (SearchTableViewCell*) [self.tableView dequeueReusableCellWithIdentifier:@"SearchTableViewCell"];
+    
+    cell.question = [self.Questions objectAtIndex:indexPath.row];
+    return cell;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 50;
+}
+
+-(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    [self fetchResultsForSearchTerm:self.searchBar.text];
 }
 
 @end
