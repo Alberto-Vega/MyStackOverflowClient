@@ -10,7 +10,7 @@
 #import "ImageFetcherService.h"
 
 @interface SearchTableViewCell ()
-@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (weak, nonatomic) IBOutlet UIImageView *userImageView;
 @property (weak, nonatomic) IBOutlet UILabel *userNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 
@@ -26,7 +26,18 @@
         if (error) {
             
         }
-        [self.imageView setImage:data];
+        
+        UIViewController *questionSearchViewController = self.window.rootViewController;
+        
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Images Downloaded" message:nil preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *action = [UIAlertAction actionWithTitle:@"Okay" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            [alertController dismissViewControllerAnimated:true completion:nil];
+        }];
+        [alertController addAction:action];
+        
+        [questionSearchViewController presentViewController:alertController animated:true completion:nil];
+
+        [self.userImageView setImage:data];
     }];
 }
 

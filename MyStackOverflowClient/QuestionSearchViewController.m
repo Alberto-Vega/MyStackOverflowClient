@@ -38,6 +38,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupMainViewController];
+//    self.tableView.estimatedRowHeight = 80
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
 //
 //    NSError *stackOverflowError = [NSError errorWithDomain:kStackOverFlowErrorDomain code:StackOverFlowTooManyAttempts userInfo:nil];
 //    
@@ -66,7 +68,7 @@
     
     [self fetchResultsForSearchTerm:@"hello world"];
     
-    UINib *nib = [ UINib nibWithNibName:@"SearchResultTableViewCell" bundle:nil];
+    UINib *nib = [ UINib nibWithNibName:@"SearchTableViewCell" bundle:nil];
     [[self tableView] registerNib:nib forCellReuseIdentifier:@"SearchTableViewCell"];
 }
 
@@ -88,6 +90,15 @@
             }];
             return;
         }
+//        
+//            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Error" message:error.localizedDescription preferredStyle:UIAlertControllerStyleAlert];
+//            UIAlertAction *action = [UIAlertAction actionWithTitle:@"Okay" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+//                [alertController dismissViewControllerAnimated:true completion:nil];
+//            }];
+//            [alertController addAction:action];
+    
+//            [self presentViewController:alertController animated:true completion:nil];
+        
         NSLog(@"Failure Requesting SOSearchAPIService SOSearchAPIService*\n\n");
         NSLog(@"%@\n\n", error.description);
     }];
@@ -110,11 +121,17 @@
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 50;
+    return UITableViewAutomaticDimension;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 60;
 }
 
 -(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    NSLog(@"%@", searchBar.text);
     [self fetchResultsForSearchTerm:self.searchBar.text];
+    [self.tableView reloadData];
 }
 
 @end

@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--My Profile View Controller-->
@@ -36,28 +35,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="PlG-kJ-paY">
-                                <rect key="frame" x="0.0" y="70" width="600" height="44"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="v8M-0H-bTs">
-                                <rect key="frame" x="0.0" y="114" width="600" height="486"/>
+                                <rect key="frame" x="0.0" y="70" width="600" height="530"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <searchBar key="tableHeaderView" contentMode="redraw" id="VJn-JX-DTR">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </searchBar>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="v8M-0H-bTs" firstAttribute="leading" secondItem="1OD-gt-cey" secondAttribute="leading" id="20p-D6-qlA"/>
                             <constraint firstAttribute="trailing" secondItem="v8M-0H-bTs" secondAttribute="trailing" id="Qdm-t9-Ofa"/>
-                            <constraint firstItem="PlG-kJ-paY" firstAttribute="leading" secondItem="1OD-gt-cey" secondAttribute="leadingMargin" constant="-20" id="b7I-vK-OQx"/>
-                            <constraint firstItem="PlG-kJ-paY" firstAttribute="top" secondItem="YGc-QS-14f" secondAttribute="bottom" constant="50" id="kqE-x6-x8a"/>
-                            <constraint firstItem="v8M-0H-bTs" firstAttribute="top" secondItem="PlG-kJ-paY" secondAttribute="bottom" id="npo-So-iSQ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="PlG-kJ-paY" secondAttribute="trailing" constant="-20" id="sAC-sm-G44"/>
+                            <constraint firstItem="v8M-0H-bTs" firstAttribute="top" secondItem="YGc-QS-14f" secondAttribute="bottom" constant="50" id="awN-LV-EoF"/>
                             <constraint firstItem="tBM-FZ-VyA" firstAttribute="top" secondItem="v8M-0H-bTs" secondAttribute="bottom" id="uY0-nA-dSK"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="searchBar" destination="PlG-kJ-paY" id="vnI-Lt-etM"/>
+                        <outlet property="searchBar" destination="VJn-JX-DTR" id="g5N-5a-Axb"/>
                         <outlet property="tableView" destination="v8M-0H-bTs" id="Ehw-V4-hEW"/>
                     </connections>
                 </viewController>
@@ -119,7 +116,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="View Controller 1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4a2-0O-h9j">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Profile" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4a2-0O-h9j">
                                                     <rect key="frame" x="15" y="0.0" width="570" height="43"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -136,7 +133,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="View Controller 2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aZj-8W-2gV">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Question Search" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aZj-8W-2gV">
                                                     <rect key="frame" x="15" y="0.0" width="570" height="43"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
