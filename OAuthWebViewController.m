@@ -10,7 +10,7 @@
 
 @import WebKit;
 
-NSString const *kClientID = @"6085";
+NSString const *kClientID = @"6141";
 NSString const *kBaseURL = @"https://stackexchange.com/oauth/dialog?";
 NSString const *kRedirectURI = @"https://stackexchange.com/oauth/login_success";
 

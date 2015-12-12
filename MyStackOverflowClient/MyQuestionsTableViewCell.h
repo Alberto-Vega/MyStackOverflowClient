@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface MyQuestionsTableViewCell : UITableViewCell
-@property Question *question;
+//@property Question *question;
 
 @end

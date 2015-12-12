@@ -9,15 +9,35 @@
 #import "SOMyQuestionsAPIService.h"
 #import "JSONAPIRequestService.h"
 
-@implementation SOMyQuestionsAPIService
-+(void) fetchMyQuestionsWithCompletion:(kNSDictionaryCompletionHandler _Nonnull)completionHandler {
+@implementation SOMyQuestionsAPIService+ (void)fetchMyQuestions:(int)page completion:(kNSDictionaryCompletionHandler)completion {
+    NSString *searchURL = @"https://api.stackexchange.com/2.2/me/questions";
+    
+    NSString *pageNumber = (page < 1 ? pageNumber = @"1" : [NSString stringWithFormat:@"%i", page]);
     
     NSMutableDictionary *parameters = [[NSMutableDictionary alloc] init];
-    [parameters setObject:@"1" forKey:@"page"];
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+//    [parameters setObject:[KeychainService loadFromKeychain] forKey:@"access_token"];
+    [parameters setObject:@"7YhjPpWyOPT97JvXSMUjwA((" forKey:@"key"];
+    [parameters setObject:pageNumber forKey:@"page"];
+    [parameters setObject:@"stackoverflow" forKey:@"site"];
+    [parameters setObject:@"activity" forKey:@"sort"];
+    [parameters setObject:@"desc" forKey:@"order"];
     
-    NSString *accessToken = [defaults stringForKey:@"accessToken"];
+    //    NSLog(@"%@?access_token=%@&key=7YhjPpWyOPT97JvXSMUjwA((&page=1&site=stackoverflow&sort=activity&order=desc", searchURL, [KeychainService loadFromKeychain]);
     
-    NSLog(@"accessToken: %@", accessToken);
+//    [JSONRequestService GETRequestWithURLString:searchURL parameters:parameters completion:^(id responseObject, NSError *error) {
+//        if (error) {
+//            completion(nil, error);
+//            return;
+//        }
+//        if ([responseObject isKindOfClass:[NSDictionary class]]) {
+//            NSDictionary *results = (NSDictionary *)responseObject;
+//            completion(results, nil);
+//            return;
+//        } else {
+//            NSError *wrongTypeError = [NSError errorWithDomain:[NSString stringWithFormat:@"GET request returned unexpected datatype: %@", [responseObject class]] code:11 userInfo:nil];
+//            completion(nil, wrongTypeError);
+//            return;
+//        }
+//    }];
 }
 @end
