@@ -38,7 +38,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="v8M-0H-bTs">
                                 <rect key="frame" x="0.0" y="70" width="600" height="530"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <searchBar key="tableHeaderView" contentMode="redraw" id="VJn-JX-DTR">
+                                <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Search Questions....." id="VJn-JX-DTR">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <textInputTraits key="textInputTraits"/>
@@ -62,10 +62,10 @@
             </objects>
             <point key="canvasLocation" x="3091" y="507"/>
         </scene>
-        <!--My Profile View Controller-->
+        <!--My Questions View Controller-->
         <scene sceneID="Nw5-ki-dvh">
             <objects>
-                <viewController storyboardIdentifier="MyQuestionsVC" id="7wL-iJ-ADE" customClass="MyProfileViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MyQuestionsVC" id="7wL-iJ-ADE" customClass="MyQuestionsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="AfN-Dp-pkV"/>
                         <viewControllerLayoutGuide type="bottom" id="cyb-Yh-RHT"/>
@@ -73,7 +73,19 @@
                     <view key="view" contentMode="scaleToFill" id="tK4-Ql-Yov">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="U2X-pe-IDh">
+                                <rect key="frame" x="20" y="28" width="560" height="564"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cyb-Yh-RHT" firstAttribute="top" secondItem="U2X-pe-IDh" secondAttribute="bottom" constant="8" symbolic="YES" id="6AA-mY-HCn"/>
+                            <constraint firstItem="U2X-pe-IDh" firstAttribute="top" secondItem="AfN-Dp-pkV" secondAttribute="bottom" constant="8" symbolic="YES" id="Cx1-k8-9wk"/>
+                            <constraint firstAttribute="trailing" secondItem="U2X-pe-IDh" secondAttribute="trailing" constant="20" symbolic="YES" id="ibO-P0-0oQ"/>
+                            <constraint firstItem="U2X-pe-IDh" firstAttribute="leading" secondItem="tK4-Ql-Yov" secondAttribute="leading" constant="20" symbolic="YES" id="vUB-OT-mF2"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hoj-YY-IfM" userLabel="First Responder" sceneMemberID="firstResponder"/>
