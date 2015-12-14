@@ -21,7 +21,6 @@
 		BF0153591C1911B600CA2967 /* SearchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BF0153581C1911B600CA2967 /* SearchTableViewCell.m */; };
 		BF47CC681C1CB28700E4208F /* MyQuestionsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF47CC671C1CB28700E4208F /* MyQuestionsCell.xib */; };
 		BF47CC6B1C1CB4FC00E4208F /* MyQuestionsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BF47CC6A1C1CB4FC00E4208F /* MyQuestionsTableViewCell.m */; };
-		BF47CC6F1C1CB71400E4208F /* SOMyQuestionsService.m in Sources */ = {isa = PBXBuildFile; fileRef = BF47CC6E1C1CB71400E4208F /* SOMyQuestionsService.m */; };
 		BFEE22EB1C16449500C8FF94 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEE22EA1C16449500C8FF94 /* main.m */; };
 		BFEE22EE1C16449500C8FF94 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEE22ED1C16449500C8FF94 /* AppDelegate.m */; };
 		BFEE22F41C16449500C8FF94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFEE22F21C16449500C8FF94 /* Main.storyboard */; };
@@ -84,8 +83,6 @@
 		BF47CC671C1CB28700E4208F /* MyQuestionsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyQuestionsCell.xib; sourceTree = "<group>"; };
 		BF47CC691C1CB4FC00E4208F /* MyQuestionsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyQuestionsTableViewCell.h; sourceTree = "<group>"; };
 		BF47CC6A1C1CB4FC00E4208F /* MyQuestionsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyQuestionsTableViewCell.m; sourceTree = "<group>"; };
-		BF47CC6D1C1CB71400E4208F /* SOMyQuestionsService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOMyQuestionsService.h; sourceTree = "<group>"; };
-		BF47CC6E1C1CB71400E4208F /* SOMyQuestionsService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOMyQuestionsService.m; sourceTree = "<group>"; };
 		BFEE22E61C16449500C8FF94 /* MyStackOverflowClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyStackOverflowClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFEE22EA1C16449500C8FF94 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BFEE22EC1C16449500C8FF94 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -158,8 +155,6 @@
 				BF01534A1C18DEEE00CA2967 /* Settings */,
 				BF0153461C18DDCA00CA2967 /* RequestServices */,
 				BF0153471C18DE2100CA2967 /* SO API */,
-				BF0153371C17B59900CA2967 /* SOMyQuestionsAPIService.h */,
-				BF0153381C17B59900CA2967 /* SOMyQuestionsAPIService.m */,
 				BF0153511C18E50300CA2967 /* Data */,
 			);
 			name = Model;
@@ -190,8 +185,8 @@
 			children = (
 				BF0153341C1797A600CA2967 /* SOSearchAPIService.h */,
 				BF0153351C1797A600CA2967 /* SOSearchAPIService.m */,
-				BF47CC6D1C1CB71400E4208F /* SOMyQuestionsService.h */,
-				BF47CC6E1C1CB71400E4208F /* SOMyQuestionsService.m */,
+				BF0153371C17B59900CA2967 /* SOMyQuestionsAPIService.h */,
+				BF0153381C17B59900CA2967 /* SOMyQuestionsAPIService.m */,
 			);
 			name = "Web Request";
 			sourceTree = "<group>";
@@ -563,7 +558,6 @@
 				BFEE233D1C165BA300C8FF94 /* MyQuestionsViewController.m in Sources */,
 				BF0153421C17BE2100CA2967 /* Question.m in Sources */,
 				BF0153361C1797A600CA2967 /* SOSearchAPIService.m in Sources */,
-				BF47CC6F1C1CB71400E4208F /* SOMyQuestionsService.m in Sources */,
 				BFEE22EB1C16449500C8FF94 /* main.m in Sources */,
 				BF47CC6B1C1CB4FC00E4208F /* MyQuestionsTableViewCell.m in Sources */,
 			);
