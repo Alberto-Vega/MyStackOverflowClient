@@ -130,7 +130,10 @@
 
 -(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
     NSLog(@"%@", searchBar.text);
-    [self fetchResultsForSearchTerm:self.searchBar.text];
+    
+    NSString * searchTerm = [[self.searchBar.text stringByAppendingString:@" "] stringByAppendingString:self.searchBar.text];
+
+    [self fetchResultsForSearchTerm: searchTerm];
     [self.tableView reloadData];
 }
 

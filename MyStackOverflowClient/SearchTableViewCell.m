@@ -29,13 +29,13 @@
         
         UIViewController *questionSearchViewController = self.window.rootViewController;
         
-        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Images Downloaded" message:nil preferredStyle:UIAlertControllerStyleAlert];
-        UIAlertAction *action = [UIAlertAction actionWithTitle:@"Okay" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-            [alertController dismissViewControllerAnimated:true completion:nil];
-        }];
-        [alertController addAction:action];
+//        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Images Downloaded" message:nil preferredStyle:UIAlertControllerStyleAlert];
+//        UIAlertAction *action = [UIAlertAction actionWithTitle:@"Okay" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+//            [alertController dismissViewControllerAnimated:true completion:nil];
+//        }];
+//        [alertController addAction:action];
         
-        [questionSearchViewController presentViewController:alertController animated:true completion:nil];
+//        [questionSearchViewController presentViewController:alertController animated:true completion:nil];
 
         [self.userImageView setImage:data];
     }];

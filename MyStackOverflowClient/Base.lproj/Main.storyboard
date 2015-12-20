@@ -16,8 +16,54 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="V5Y-hm-ECn">
+                                <rect key="frame" x="90" y="63" width="420" height="420"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="420" id="mXN-eu-4eO"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="COi-bN-dj5">
+                                <rect key="frame" x="90" y="501" width="90" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reputation:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OXs-bW-0EX">
+                                <rect key="frame" x="90" y="550" width="88" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JEB-CR-9Nj">
+                                <rect key="frame" x="186" y="550" width="34" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="34" id="RLD-cQ-ONb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="COi-bN-dj5" firstAttribute="top" secondItem="V5Y-hm-ECn" secondAttribute="bottom" constant="18" id="4Qh-LA-skM"/>
+                            <constraint firstItem="OXs-bW-0EX" firstAttribute="top" secondItem="COi-bN-dj5" secondAttribute="bottom" constant="8" symbolic="YES" id="M6g-yg-37s"/>
+                            <constraint firstItem="COi-bN-dj5" firstAttribute="leading" secondItem="V5Y-hm-ECn" secondAttribute="leading" id="OFD-PX-hYb"/>
+                            <constraint firstItem="OXs-bW-0EX" firstAttribute="leading" secondItem="V5Y-hm-ECn" secondAttribute="leading" id="PWw-Jv-fxE"/>
+                            <constraint firstItem="V5Y-hm-ECn" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="43" id="Rbq-Nz-BS8"/>
+                            <constraint firstItem="JEB-CR-9Nj" firstAttribute="leading" secondItem="OXs-bW-0EX" secondAttribute="trailing" constant="8" symbolic="YES" id="Zc1-yE-ydi"/>
+                            <constraint firstItem="V5Y-hm-ECn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dZk-wD-Y8x"/>
+                            <constraint firstItem="JEB-CR-9Nj" firstAttribute="baseline" secondItem="OXs-bW-0EX" secondAttribute="baseline" id="gdm-XB-4i2"/>
+                            <constraint firstItem="V5Y-hm-ECn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="90" id="waf-3i-Aqw"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="profileImageView" destination="V5Y-hm-ECn" id="rzl-vg-kj6"/>
+                        <outlet property="profileName" destination="COi-bN-dj5" id="gh2-0D-Vqa"/>
+                        <outlet property="reputationLabel" destination="OXs-bW-0EX" id="jzJ-Tw-vni"/>
+                        <outlet property="reputationNumberLabel" destination="JEB-CR-9Nj" id="z06-dl-RyV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -117,7 +163,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="FdJ-AN-n20">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <sections>
                             <tableViewSection headerTitle="Menu" id="jUR-Wg-wyK">
                                 <cells>
@@ -132,7 +178,7 @@
                                                     <rect key="frame" x="15" y="0.0" width="570" height="43"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -149,7 +195,7 @@
                                                     <rect key="frame" x="15" y="0.0" width="570" height="43"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>

@@ -225,9 +225,9 @@
 		BF0153541C18F40F00CA2967 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BFEE22F21C16449500C8FF94 /* Main.storyboard */,
 				BF0153551C19095E00CA2967 /* SearchTableViewCell.xib */,
 				BF47CC671C1CB28700E4208F /* MyQuestionsCell.xib */,
-				BFEE22F21C16449500C8FF94 /* Main.storyboard */,
 				BFEE22FA1C16449500C8FF94 /* LaunchScreen.storyboard */,
 			);
 			name = Views;

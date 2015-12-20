@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface MyProfileViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIImageView *profileImageView;
+@property (weak, nonatomic) IBOutlet UILabel *profileName;
+@property (weak, nonatomic) IBOutlet UILabel *reputationLabel;
+@property (weak, nonatomic) IBOutlet UILabel *reputationNumberLabel;
 
 @end
