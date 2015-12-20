@@ -16,8 +16,7 @@
 @property NSURL *link;
 @property int reputation;
 @property int userID;
-@property int acceptRate;
 
-- (id)initWithDisplayName:(NSString*)displayName profileImageURL:(NSURL *)profileImageURL link:(NSURL*)link reputation:(int)reputation userID:(int)userID acceptRate:(int)acceptRate;
+- (id)initWithDisplayName:(NSString*)displayName profileImageURL:(NSURL *)profileImageURL link:(NSURL*)link reputation:(int)reputation userID:(int)userID;
 
 @end

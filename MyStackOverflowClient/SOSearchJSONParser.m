@@ -30,12 +30,13 @@
                         NSString *linkURLString = ownerDictionary[@"link"];
                         int reputation = (int) ownerDictionary[@"reputation"];
                         int userID = (int) ownerDictionary[@"user_id"];
-                        int acceptRate = (int) ownerDictionary[@"accept_rate"];
+//                        int acceptRate = (int) ownerDictionary[@"accept_rate"];
                         
                         NSURL *profileImageURL = [[NSURL alloc] initWithString:profileImageURLString];
                         NSURL *link = [[NSURL alloc] initWithString:linkURLString];
                         
-                        owner = [[User alloc] initWithDisplayName:displayName profileImageURL:profileImageURL link:link reputation:reputation userID:userID acceptRate:acceptRate];
+//                        owner = [[User alloc] initWithDisplayName:displayName profileImageURL:profileImageURL link:link reputation:reputation userID:userID acceptRate:acceptRate];
+                        owner = [[User alloc] initWithDisplayName:displayName profileImageURL:profileImageURL link:link reputation:reputation userID:userID];
                     }
                 }
                 

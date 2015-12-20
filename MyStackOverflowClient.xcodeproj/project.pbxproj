@@ -21,6 +21,8 @@
 		BF0153591C1911B600CA2967 /* SearchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BF0153581C1911B600CA2967 /* SearchTableViewCell.m */; };
 		BF47CC681C1CB28700E4208F /* MyQuestionsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF47CC671C1CB28700E4208F /* MyQuestionsCell.xib */; };
 		BF47CC6B1C1CB4FC00E4208F /* MyQuestionsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BF47CC6A1C1CB4FC00E4208F /* MyQuestionsTableViewCell.m */; };
+		BF85AE461C263A99004292E6 /* SOMyUserProfileAPIService.m in Sources */ = {isa = PBXBuildFile; fileRef = BF85AE451C263A99004292E6 /* SOMyUserProfileAPIService.m */; };
+		BF85AE491C266F3B004292E6 /* SOUserJSONParser.m in Sources */ = {isa = PBXBuildFile; fileRef = BF85AE481C266F3B004292E6 /* SOUserJSONParser.m */; };
 		BFEE22EB1C16449500C8FF94 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEE22EA1C16449500C8FF94 /* main.m */; };
 		BFEE22EE1C16449500C8FF94 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEE22ED1C16449500C8FF94 /* AppDelegate.m */; };
 		BFEE22F41C16449500C8FF94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFEE22F21C16449500C8FF94 /* Main.storyboard */; };
@@ -83,6 +85,10 @@
 		BF47CC671C1CB28700E4208F /* MyQuestionsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyQuestionsCell.xib; sourceTree = "<group>"; };
 		BF47CC691C1CB4FC00E4208F /* MyQuestionsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyQuestionsTableViewCell.h; sourceTree = "<group>"; };
 		BF47CC6A1C1CB4FC00E4208F /* MyQuestionsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyQuestionsTableViewCell.m; sourceTree = "<group>"; };
+		BF85AE441C263A99004292E6 /* SOMyUserProfileAPIService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOMyUserProfileAPIService.h; sourceTree = "<group>"; };
+		BF85AE451C263A99004292E6 /* SOMyUserProfileAPIService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOMyUserProfileAPIService.m; sourceTree = "<group>"; };
+		BF85AE471C266F3B004292E6 /* SOUserJSONParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOUserJSONParser.h; sourceTree = "<group>"; };
+		BF85AE481C266F3B004292E6 /* SOUserJSONParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOUserJSONParser.m; sourceTree = "<group>"; };
 		BFEE22E61C16449500C8FF94 /* MyStackOverflowClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyStackOverflowClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFEE22EA1C16449500C8FF94 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BFEE22EC1C16449500C8FF94 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -187,6 +193,8 @@
 				BF0153351C1797A600CA2967 /* SOSearchAPIService.m */,
 				BF0153371C17B59900CA2967 /* SOMyQuestionsAPIService.h */,
 				BF0153381C17B59900CA2967 /* SOMyQuestionsAPIService.m */,
+				BF85AE441C263A99004292E6 /* SOMyUserProfileAPIService.h */,
+				BF85AE451C263A99004292E6 /* SOMyUserProfileAPIService.m */,
 			);
 			name = "Web Request";
 			sourceTree = "<group>";
@@ -196,6 +204,8 @@
 			children = (
 				BF01533A1C17B85100CA2967 /* SOSearchJSONParser.h */,
 				BF01533B1C17B85100CA2967 /* SOSearchJSONParser.m */,
+				BF85AE471C266F3B004292E6 /* SOUserJSONParser.h */,
+				BF85AE481C266F3B004292E6 /* SOUserJSONParser.m */,
 			);
 			name = "JSON Parsers";
 			sourceTree = "<group>";
@@ -324,12 +334,12 @@
 			children = (
 				BF47CC6C1C1CB50200E4208F /* CustomCells */,
 				BFEE23331C16586A00C8FF94 /* ContainerViewController */,
+				BFEE23391C165BA300C8FF94 /* QuestionSearchViewController.h */,
+				BFEE233A1C165BA300C8FF94 /* QuestionSearchViewController.m */,
 				BFEE23431C1684E200C8FF94 /* MenuTableViewController.h */,
 				BFEE23441C1684E200C8FF94 /* MenuTableViewController.m */,
 				BFEE232C1C164C2D00C8FF94 /* OAuthWebViewController.h */,
 				BFEE232D1C164C2D00C8FF94 /* OAuthWebViewController.m */,
-				BFEE23391C165BA300C8FF94 /* QuestionSearchViewController.h */,
-				BFEE233A1C165BA300C8FF94 /* QuestionSearchViewController.m */,
 				BFEE23351C165BA300C8FF94 /* MyProfileViewController.h */,
 				BFEE23361C165BA300C8FF94 /* MyProfileViewController.m */,
 				BFEE23371C165BA300C8FF94 /* MyQuestionsViewController.h */,
@@ -546,6 +556,7 @@
 				BFEE22EE1C16449500C8FF94 /* AppDelegate.m in Sources */,
 				BF01533C1C17B85100CA2967 /* SOSearchJSONParser.m in Sources */,
 				BF01533F1C17B9E000CA2967 /* User.m in Sources */,
+				BF85AE491C266F3B004292E6 /* SOUserJSONParser.m in Sources */,
 				BFEE233E1C165BA300C8FF94 /* QuestionSearchViewController.m in Sources */,
 				BF0153501C18E23000CA2967 /* CFSettings.m in Sources */,
 				BF0153591C1911B600CA2967 /* SearchTableViewCell.m in Sources */,
@@ -554,6 +565,7 @@
 				BF01534D1C18DF0E00CA2967 /* SOSearchSettings.m in Sources */,
 				BF0153301C178FB600CA2967 /* JSONAPIRequestService.m in Sources */,
 				BFEE233C1C165BA300C8FF94 /* MyProfileViewController.m in Sources */,
+				BF85AE461C263A99004292E6 /* SOMyUserProfileAPIService.m in Sources */,
 				BFEE23321C16586100C8FF94 /* MenuContainerViewController.m in Sources */,
 				BFEE233D1C165BA300C8FF94 /* MyQuestionsViewController.m in Sources */,
 				BF0153421C17BE2100CA2967 /* Question.m in Sources */,

@@ -135,6 +135,8 @@
 
     [self fetchResultsForSearchTerm: searchTerm];
     [self.tableView reloadData];
+    [searchBar resignFirstResponder];
+
 }
 
 @end

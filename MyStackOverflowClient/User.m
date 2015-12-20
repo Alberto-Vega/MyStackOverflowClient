@@ -10,7 +10,7 @@
 
 @implementation User
 
-- (id)initWithDisplayName:(NSString *)displayName profileImageURL:(NSURL *)profileImageURL link:(NSURL *)link reputation:(int)reputation userID:(int)userID acceptRate:(int)acceptRate {
+- (id)initWithDisplayName:(NSString *)displayName profileImageURL:(NSURL *)profileImageURL link:(NSURL *)link reputation:(int)reputation userID:(int)userID {
     
     if (self = [super init]) {
         
@@ -19,7 +19,6 @@
         [self setLink:link];
         [self setReputation:reputation];
         [self setUserID:userID];
-        [self setAcceptRate:acceptRate];
     }
     return self;
 }

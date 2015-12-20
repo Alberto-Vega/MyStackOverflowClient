@@ -22,9 +22,11 @@ NSTimeInterval const kTimeToSlideMenuOpen = 0.2;
 @interface MenuContainerViewController ()<UITableViewDelegate>
 
 @property (strong, nonatomic) MenuTableViewController *leftMenuViewController;
-@property (strong, nonatomic) QuestionSearchViewController *topViewController;
+@property (strong, nonatomic) QuestionSearchViewController *questionSearchViewController;
 @property (strong, nonatomic) MyQuestionsViewController *myQuestionsViewController;
+@property (strong, nonatomic) MyProfileViewController *myProfileViewController;
 
+@property(strong, nonatomic) UIViewController *topViewController;
 @property(strong, nonatomic) UIButton *burgerButton;
 @property(strong, nonatomic) UIPanGestureRecognizer *panGesture;
 @property(strong, nonatomic) NSArray *viewControllers;
@@ -49,7 +51,7 @@ NSTimeInterval const kTimeToSlideMenuOpen = 0.2;
     [self setupMainContentViewController];
     [self setupAdditionalMenuViewControllers];
     
-    self.viewControllers = @[self.topViewController, self.myQuestionsViewController];
+    self.viewControllers = @[self.topViewController, self.myProfileViewController];
 }
 
 - (BOOL)prefersStatusBarHidden {
@@ -80,8 +82,15 @@ NSTimeInterval const kTimeToSlideMenuOpen = 0.2;
 
 - (void)setupAdditionalMenuViewControllers {
     
-    MyQuestionsViewController *myQuestionsVC = [self.storyboard instantiateViewControllerWithIdentifier:@"MyQuestionsVC"];
-    self.myQuestionsViewController = myQuestionsVC;
+//    MyQuestionsViewController *myQuestionsVC = [self.storyboard instantiateViewControllerWithIdentifier:@"MyQuestionsVC"];
+//    self.myQuestionsViewController = myQuestionsVC;
+    
+    MyProfileViewController *myProfileViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"MyProfileViewController"];
+    [self addChildViewController:myProfileViewController];
+    self.myProfileViewController = myProfileViewController;
+//    self.myProfileViewController.view.frame = self.view.frame;
+//    [self.view addSubview:myProfileViewController.view];
+//    [myProfileViewController didMoveToParentViewController:self];
 }
 
 //MARK: Setup Menu Button
@@ -165,10 +174,11 @@ NSTimeInterval const kTimeToSlideMenuOpen = 0.2;
         [self.topViewController.view removeFromSuperview];
         [self.topViewController removeFromParentViewController];
         
-        [self addChildViewController:viewController];
         viewController.view.frame = oldFrame;
+        [self addChildViewController:viewController];
         [self.view addSubview:viewController.view];
         [viewController didMoveToParentViewController:self];
+        
         self.topViewController = viewController;
         
         [self.burgerButton removeFromSuperview];
