@@ -11,6 +11,6 @@
 
 @interface SOMyQuestionsAPIService : NSObject
 
-+(void )fetchMyQuestionsWithCompletion: (kNSDictionaryCompletionHandler _Nonnull)completionHandler;
++ (void)fetchMyQuestions:(int)page completion:(kNSDictionaryCompletionHandler)completion;
 
 @end

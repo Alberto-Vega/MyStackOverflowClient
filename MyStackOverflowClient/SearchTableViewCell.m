@@ -27,7 +27,7 @@
             
         }
         
-        UIViewController *questionSearchViewController = self.window.rootViewController;
+//        UIViewController *questionSearchViewController = self.window.rootViewController;
         
 //        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Images Downloaded" message:nil preferredStyle:UIAlertControllerStyleAlert];
 //        UIAlertAction *action = [UIAlertAction actionWithTitle:@"Okay" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
