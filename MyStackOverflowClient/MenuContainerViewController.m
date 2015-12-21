@@ -17,7 +17,7 @@ CGFloat const kBurgerOpenScreenMultiplier = 2.0;
 CGFloat const kBurgerButtonWidth = 50.0;
 CGFloat const kBurgerButtonHeight = 50.0;
 
-NSTimeInterval const kTimeToSlideMenuOpen = 0.2;
+NSTimeInterval const kTimeToSlideMenuOpen = 0.3;
 
 @interface MenuContainerViewController ()<UITableViewDelegate>
 
@@ -25,7 +25,6 @@ NSTimeInterval const kTimeToSlideMenuOpen = 0.2;
 @property (strong, nonatomic) QuestionSearchViewController *questionSearchViewController;
 @property (strong, nonatomic) MyQuestionsViewController *myQuestionsViewController;
 @property (strong, nonatomic) MyProfileViewController *myProfileViewController;
-
 @property(strong, nonatomic) UIViewController *topViewController;
 @property(strong, nonatomic) UIButton *burgerButton;
 @property(strong, nonatomic) UIPanGestureRecognizer *panGesture;
@@ -39,19 +38,27 @@ NSTimeInterval const kTimeToSlideMenuOpen = 0.2;
     [super viewDidLoad];
     
     [self setupAllViewControllers];
-    
-    [self setupPanGesture];
     [self setupBurgerButton];
+
+    [self setupPanGesture];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self setupBurgerButton];
+
 }
 
 //MARK: View Controller Setup
 
 - (void)setupAllViewControllers {
     [self setupMenuViewController];
-    [self setupMainContentViewController];
-    [self setupAdditionalMenuViewControllers];
+    [self setupQuestionSearchViewController];
+    [self setupMyQuestionsViewController];
+    [self setupMyProfileViewController];
     
-    self.viewControllers = @[self.topViewController, self.myProfileViewController];
+    self.topViewController = self.questionSearchViewController;
+    self.viewControllers = @[self.questionSearchViewController, self.myQuestionsViewController, self.myProfileViewController];
 }
 
 - (BOOL)prefersStatusBarHidden {
@@ -61,36 +68,33 @@ NSTimeInterval const kTimeToSlideMenuOpen = 0.2;
 - (void)setupMenuViewController {
     MenuTableViewController *leftMenuVC = [self.storyboard instantiateViewControllerWithIdentifier: @"MenuTableViewController"];
     leftMenuVC.tableView.delegate = self;
-    
     [self addChildViewController:leftMenuVC];
     leftMenuVC.view.frame = self.view.frame;
-    
     [self.view addSubview:leftMenuVC.view];
     [leftMenuVC didMoveToParentViewController:self];
     self.leftMenuViewController = leftMenuVC;
 }
 
-- (void)setupMainContentViewController {
-    QuestionSearchViewController *contentViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"QuestionSearchViewController"];
-    
-    [self addChildViewController:contentViewController];
-    contentViewController.view.frame = self.view.frame;
-    [self.view addSubview:contentViewController.view];
-    [contentViewController didMoveToParentViewController:self];
-    self.topViewController = contentViewController;
+- (void)setupQuestionSearchViewController {
+    QuestionSearchViewController *questionSearchViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"QuestionSearchViewController"];
+    [self addChildViewController:questionSearchViewController];
+    questionSearchViewController.view.frame = self.view.frame;
+    [self.view addSubview:questionSearchViewController.view];
+    [questionSearchViewController didMoveToParentViewController:self];
+    self.questionSearchViewController = questionSearchViewController;
+//    self.topViewController = questionSearchViewController;
 }
 
-- (void)setupAdditionalMenuViewControllers {
-    
-//    MyQuestionsViewController *myQuestionsVC = [self.storyboard instantiateViewControllerWithIdentifier:@"MyQuestionsVC"];
-//    self.myQuestionsViewController = myQuestionsVC;
+- (void)setupMyQuestionsViewController {
+    MyQuestionsViewController *myQuestionsViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"MyQuestionsViewController"];
+    self.myQuestionsViewController = myQuestionsViewController;
+}
+
+- (void)setupMyProfileViewController {
     
     MyProfileViewController *myProfileViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"MyProfileViewController"];
-    [self addChildViewController:myProfileViewController];
+//    [self addChildViewController:myProfileViewController];
     self.myProfileViewController = myProfileViewController;
-//    self.myProfileViewController.view.frame = self.view.frame;
-//    [self.view addSubview:myProfileViewController.view];
-//    [myProfileViewController didMoveToParentViewController:self];
 }
 
 //MARK: Setup Menu Button

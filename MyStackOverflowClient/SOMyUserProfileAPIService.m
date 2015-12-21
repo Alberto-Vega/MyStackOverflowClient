@@ -25,14 +25,18 @@
     [parameters setObject:@"reputation" forKey:@"sort"];
     [parameters setObject:@"desc" forKey:@"order"];
     
-    [JSONAPIRequestService getRequestWithURL:searchURL parameters:parameters withCompletion:^(id  _Nullable data, NSError * _Nullable error) {
+//    NSLog(@"%@?access_token=%@&site=stackoverflow&sort=reputation&order=desc", searchURL, accessToken);
+
+    
+    [JSONAPIRequestService getRequestWithURL:searchURL parameters:parameters withCompletion:^(id  _Nullable dataObject, NSError * _Nullable error) {
         if (error != nil) {
             completion(nil, error);
             return ;
         }
         
-        if ([data isKindOfClass:[NSDictionary class]]) {
-            completion((NSDictionary * ) data, nil);
+        if ([dataObject isKindOfClass:[NSDictionary class]]) {
+            NSDictionary *data = (NSDictionary *)dataObject;
+            completion(data, nil);
             return;
         }
         
