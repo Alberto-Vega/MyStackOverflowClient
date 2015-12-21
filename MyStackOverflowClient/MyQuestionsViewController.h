@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface MyQuestionsViewController : UIViewController
+//@property (strong, nonatomic) Question* question;
 
 @end

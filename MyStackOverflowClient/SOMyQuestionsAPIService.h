@@ -10,5 +10,7 @@
 #import "Constants.h"
 
 @interface SOMyQuestionsAPIService : NSObject
+
 +(void )fetchMyQuestionsWithCompletion: (kNSDictionaryCompletionHandler _Nonnull)completionHandler;
+
 @end

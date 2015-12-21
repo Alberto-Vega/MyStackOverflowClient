@@ -9,7 +9,10 @@
 #import "SOMyQuestionsAPIService.h"
 #import "JSONAPIRequestService.h"
 
-@implementation SOMyQuestionsAPIService+ (void)fetchMyQuestions:(int)page completion:(kNSDictionaryCompletionHandler)completion {
+@implementation SOMyQuestionsAPIService
+
++ (void)fetchMyQuestions:(int)page completion:(kNSDictionaryCompletionHandler)completion
+{
     NSString *searchURL = @"https://api.stackexchange.com/2.2/me/questions";
     
     NSString *pageNumber = (page < 1 ? pageNumber = @"1" : [NSString stringWithFormat:@"%i", page]);
@@ -24,20 +27,21 @@
     
     //    NSLog(@"%@?access_token=%@&key=7YhjPpWyOPT97JvXSMUjwA((&page=1&site=stackoverflow&sort=activity&order=desc", searchURL, [KeychainService loadFromKeychain]);
     
-//    [JSONRequestService GETRequestWithURLString:searchURL parameters:parameters completion:^(id responseObject, NSError *error) {
-//        if (error) {
-//            completion(nil, error);
-//            return;
-//        }
-//        if ([responseObject isKindOfClass:[NSDictionary class]]) {
-//            NSDictionary *results = (NSDictionary *)responseObject;
-//            completion(results, nil);
-//            return;
-//        } else {
-//            NSError *wrongTypeError = [NSError errorWithDomain:[NSString stringWithFormat:@"GET request returned unexpected datatype: %@", [responseObject class]] code:11 userInfo:nil];
-//            completion(nil, wrongTypeError);
-//            return;
-//        }
-//    }];
+    [JSONAPIRequestService getRequestWithURL:searchURL parameters:parameters withCompletion:^(id  _Nullable data, NSError * _Nullable error) {
+
+        if (error) {
+            completion(nil, error);
+            return;
+        }
+        if ([data isKindOfClass:[NSDictionary class]]) {
+            NSDictionary *results = (NSDictionary *)data;
+            completion(results, nil);
+            return;
+        } else {
+            NSError *wrongTypeError = [NSError errorWithDomain:[NSString stringWithFormat:@"GET request returned unexpected datatype: %@", [data class]] code:11 userInfo:nil];
+            completion(nil, wrongTypeError);
+            return;
+        }
+    }];
 }
 @end
